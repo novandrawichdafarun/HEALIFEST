@@ -29,3 +29,9 @@ export function getTips(answers: Answers) {
 
   return tips;
 }
+
+export function isActivePath(pathname: string, href: string) {
+  const path = pathname.length > 1 ? pathname.replace(/\/$/, "") : pathname;
+  if (href === "/") return path === "/";
+  return path === href || path.startsWith(`${href}/`);
+}

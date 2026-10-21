@@ -1,6 +1,8 @@
 import Footer from "@/components/Footer";
+import HeroVisual from "@/components/HeroVisual";
 import Navbar from "@/components/Navbar";
-import { ArrowRight, Check, HeartPulse, Leaf, Salad } from "lucide-react";
+import { stats } from "@/constants/beranda";
+import { ArrowRight, Check, HeartPulse, Leaf } from "lucide-react";
 import Link from "next/link";
 
 export const metadata = { title: "Beranda | HEALIFEST" };
@@ -71,11 +73,7 @@ export default function Home() {
                 </small>
               </span>
             </div>
-            <Salad
-              className="relative z-1 size-[clamp(8rem,16vw,13rem)] rotate-[-8deg] text-(--green) drop-shadow-[0_16px_12px_rgba(38,80,48,0.13)] max-[760px]:size-36 max-[480px]:size-30"
-              strokeWidth={1.25}
-              aria-hidden="true"
-            />
+            <HeroVisual />
             <div className="absolute bottom-6 left-0 flex items-center gap-2.5 rounded-[15px] border border-[rgba(23,107,80,0.08)] bg-white px-4.25 py-3.25 shadow-(--shadow) max-[760px]:bottom-2.5 max-[760px]:left-[2%] max-[480px]:px-3 max-[480px]:py-2.5">
               <span className="grid size-9.5 place-items-center rounded-xl bg-[#e7f5ec] text-(--green)">
                 <HeartPulse size={21} aria-hidden="true" />
@@ -91,26 +89,36 @@ export default function Home() {
         </section>
 
         <section
-          className="flex justify-center gap-[clamp(28px,9vw,130px)] border-b border-(--line) bg-white px-[7%] py-6.5 max-[760px]:justify-around max-[760px]:gap-3.75 max-[760px]:px-[5%] max-[760px]:py-5 max-[480px]:gap-2"
+          className="border-b border-(--line) bg-white px-[7%] max-[760px]:px-[5%]"
           aria-label="Fokus website"
         >
-          {[
-            { value: "4", label: "Topik kesehatan utama" },
-            { value: "7 hari", label: "Tantangan kebiasaan sehat" },
-            { value: "1 langkah", label: "Mulai perubahan hari ini" },
-          ].map((item) => (
-            <div
-              className="flex items-center gap-3 max-[760px]:flex-1 max-[760px]:flex-col max-[760px]:text-center"
-              key={item.value}
-            >
-              <strong className="text-2xl text-(--green) max-[760px]:block max-[480px]:text-[1.15rem]">
-                {item.value}
-              </strong>
-              <span className="max-w-28.75 text-[0.82rem] leading-[1.35] text-(--muted) max-[760px]:mx-auto max-[760px]:block max-[760px]:text-[0.72rem] max-[480px]:text-[0.65rem]">
-                {item.label}
-              </span>
-            </div>
-          ))}
+          <div className="mx-auto grid max-w-5xl grid-cols-3 divide-x divide-(--line)">
+            {stats.map(({ icon: Icon, value, unit, label }) => (
+              <div
+                className="flex items-center justify-center gap-4 px-4 py-7 max-[760px]:flex-col max-[760px]:gap-2 max-[760px]:px-2 max-[760px]:py-5 max-[760px]:text-center"
+                key={label}
+              >
+                <span className="grid size-12 shrink-0 place-items-center rounded-[14px] bg-(--mint) text-(--green) max-[760px]:size-10 max-[760px]:rounded-xl">
+                  <Icon size={24} aria-hidden="true" />
+                </span>
+                <div className="leading-tight">
+                  <p className="flex items-baseline gap-1.5 max-[760px]:justify-center">
+                    <strong className="text-[1.9rem] font-extrabold tracking-[-0.5px] text-(--green) max-[480px]:text-[1.4rem]">
+                      {value}
+                    </strong>
+                    {unit && (
+                      <span className="text-[0.95rem] font-bold text-(--green-dark) max-[480px]:text-[0.8rem]">
+                        {unit}
+                      </span>
+                    )}
+                  </p>
+                  <p className="mt-1 text-[0.82rem] leading-[1.35] text-(--muted) max-[760px]:text-[0.72rem] max-[480px]:text-[0.65rem]">
+                    {label}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </section>
       </main>
 
