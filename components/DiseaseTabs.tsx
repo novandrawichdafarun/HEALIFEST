@@ -80,7 +80,7 @@ export default function DiseaseTabs({ tabs, panels }: DiseaseTabsProps) {
             <button
               aria-controls={`disease-panel-${tab.id}`}
               aria-selected={isActive}
-              className={`rounded-full border px-[18px] py-2.5 text-[0.9rem] font-bold transition-colors ${
+              className={`rounded-full border px-4.5 py-2.5 text-[0.9rem] font-bold transition-colors ${
                 isActive
                   ? "border-(--green) bg-(--green) text-white"
                   : "border-[#d5e4d9] bg-white text-[#4d6256] hover:border-(--green) hover:text-(--green)"
@@ -102,7 +102,7 @@ export default function DiseaseTabs({ tabs, panels }: DiseaseTabsProps) {
       {tabs.map((tab, index) => (
         <div
           aria-labelledby={`disease-tab-${tab.id}`}
-          className="scroll-mt-[90px]"
+          className="scroll-mt-22.5"
           hidden={tab.id !== activeTabId}
           id={`disease-panel-${tab.id}`}
           key={tab.id}

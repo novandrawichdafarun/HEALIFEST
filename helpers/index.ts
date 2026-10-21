@@ -1,4 +1,6 @@
 import { Answers } from "@/types/gayaHidup";
+import { quizzes } from "@/constants/quizzes";
+import type { Quiz } from "@/types/quiz";
 
 export function getTips(answers: Answers) {
   const tips: string[] = [];
@@ -34,4 +36,14 @@ export function isActivePath(pathname: string, href: string) {
   const path = pathname.length > 1 ? pathname.replace(/\/$/, "") : pathname;
   if (href === "/") return path === "/";
   return path === href || path.startsWith(`${href}/`);
+}
+
+const quizMap = new Map<string, Quiz>(quizzes.map((quiz) => [quiz.id, quiz]));
+
+export function getQuiz(id: string): Quiz | undefined {
+  return quizMap.get(id);
+}
+
+export function getAllQuizzes(): Quiz[] {
+  return quizzes;
 }

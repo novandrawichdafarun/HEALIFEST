@@ -1,5 +1,5 @@
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import Footer from "@/components/layouts/Footer";
+import Navbar from "@/components/layouts/Navbar";
 import Link from "next/link";
 import { ArrowRight, Stethoscope } from "lucide-react";
 
@@ -10,6 +10,8 @@ import { conditions } from "@/constants/conditions";
 
 export const metadata: Metadata = {
   title: "Kenali Penyakit | HEALIFEST",
+  description:
+    "Kenali penyakit tidak menular seperti diabetes, hipertensi, kolesterol, dan asam urat. Pelajari pengertian, faktor risiko, gejala, komplikasi, pemeriksaan, dan langkah pengelolaan.",
 };
 
 export default function PenyakitPage() {

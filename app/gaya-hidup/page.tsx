@@ -1,6 +1,12 @@
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import Footer from "@/components/layouts/Footer";
+import Navbar from "@/components/layouts/Navbar";
 import { habits } from "@/constants/habits";
+
+export const metadata = {
+  title: "Gaya Hidup Sehat | HEALIFEST",
+  description:
+    "Pelajari cara membangun gaya hidup sehat dengan kebiasaan yang positif dan berkelanjutan.",
+};
 
 export default function GayaHidupPage() {
   return (

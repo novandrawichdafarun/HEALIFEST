@@ -1,6 +1,6 @@
-import Footer from "@/components/Footer";
+import Footer from "@/components/layouts/Footer";
 import HeroVisual from "@/components/HeroVisual";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/layouts/Navbar";
 import { stats } from "@/constants/beranda";
 import { ArrowRight, Check, HeartPulse, Leaf } from "lucide-react";
 import Link from "next/link";

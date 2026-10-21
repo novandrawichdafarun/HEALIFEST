@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "@/styles/globals.css";
 
 export const metadata: Metadata = {
   title: "HEALIFEST",
@@ -12,6 +12,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className="h-full antialiased">
+      <link rel="icon" href="/logo.png" />
+      <link rel="apple-touch-icon" href="/logo.png" />
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

@@ -1,6 +1,7 @@
 export const footerLinks = [
   { href: "/", label: "Beranda" },
   { href: "/penyakit", label: "Kenali Penyakit" },
+  { href: "/kuis-penyakit", label: "Kuis Penyakit" },
   { href: "/gaya-hidup", label: "Gaya Hidup" },
   { href: "/cek-gaya-hidup", label: "Cek Gaya Hidup" },
 ] as const;
