@@ -4,6 +4,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "HEALIFEST",
   description: "Healthy Lifestyle, Better Life.",
+  verification: {
+    google: "google1019943cf02ae5bc.html",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
