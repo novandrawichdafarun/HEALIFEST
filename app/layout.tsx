@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "HEALIFEST",
   description: "Healthy Lifestyle, Better Life.",
   verification: {
-    google: "google1019943cf02ae5bc.html",
+    google: "X2SOOBeTLMwoDQk7hPArZFUwVp5UhKpYW0qRfYbIeec",
   },
 };
 
