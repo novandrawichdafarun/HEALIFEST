@@ -1,69 +1,120 @@
-import Image from "next/image";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import { ArrowRight, Check, HeartPulse, Leaf, Salad } from "lucide-react";
+import Link from "next/link";
+
+export const metadata = { title: "Beranda | HEALIFEST" };
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <>
+      <Navbar />
+
+      <main>
+        <section
+          className="grid grid-cols-[1.1fr_0.9fr] items-center gap-10 overflow-hidden bg-[linear-gradient(120deg,#e8f5ed_0%,#f4faf5_60%,#fdfcf5_100%)] px-[8%] pt-18.5 pb-19.5 max-[1050px]:px-[6%] max-[760px]:grid-cols-1 max-[760px]:gap-1.25 max-[760px]:px-[6%] max-[760px]:pt-13.75 max-[760px]:pb-10"
+          id="beranda"
+        >
+          <div className="max-w-170">
+            <span className="inline-block text-[0.73rem] font-extrabold tracking-[1.8px] text-(--green)">
+              YOUR HEALTH, YOUR FUTURE
+            </span>
+            <h1 className="my-4.5 mb-5.5 max-w-180 text-[clamp(2.7rem,5vw,4.5rem)] font-bold leading-[1.08] tracking-[-2px] text-(--green-dark) max-[760px]:tracking-[-1px] max-[480px]:text-[2.55rem]">
+              Sehat dimulai dari{" "}
+              <span className="text-(--green)">kebiasaan kecil.</span>
+            </h1>
+            <p className="max-w-150 text-[1.06rem] text-[#52685c]">
+              Kenali faktor risiko penyakit tidak menular, temukan informasi
+              yang tepercaya, dan mulai perjalanan menuju hidup yang lebih sehat
+              bersama HEALIFEST.
+            </p>
+            <div className="mt-6.5 flex flex-wrap gap-3">
+              <Link
+                className="inline-flex items-center justify-center gap-2.5 rounded-[11px] bg-(--green) px-5 py-3 text-[0.92rem] font-bold text-white no-underline transition-[transform,background] duration-200 hover:-translate-y-0.5 hover:bg-(--green-dark)"
+                href="/penyakit"
+              >
+                Jelajahi Edukasi
+                <ArrowRight size={17} aria-hidden="true" />
+              </Link>
+              <Link
+                className="inline-flex items-center justify-center gap-2.5 rounded-[11px] border border-[#cfe0d4] bg-white px-5 py-3 text-[0.92rem] font-bold text-(--green) no-underline transition-transform duration-200 hover:-translate-y-0.5"
+                href="/gaya-hidup"
+              >
+                Coba Gaya Hidup Sehat
+              </Link>
+            </div>
+            <div className="mt-5.75 flex items-center gap-1.5 text-[0.84rem] text-[#52685c]">
+              <Check
+                className="text-(--green)"
+                size={16}
+                strokeWidth={3}
+                aria-hidden="true"
+              />
+              Edukasi mudah dipahami · Interaktif · Gratis
+            </div>
+          </div>
+
+          <div
+            className="relative grid min-h-90 place-items-center max-[760px]:min-h-72.5 max-[480px]:min-h-65"
+            role="img"
+            aria-label="Ilustrasi makanan sehat dan kebiasaan hidup sehat"
           >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
+            <div className="absolute size-[min(340px,75vw)] rounded-full bg-[radial-gradient(circle_at_35%_30%,#fff9e5,#c6e7d2_66%,#a8d4bb)] max-[760px]:size-62.5 max-[480px]:size-55" />
+            <div className="absolute top-6.25 right-0 flex items-center gap-2.5 rounded-[15px] border border-[rgba(23,107,80,0.08)] bg-white px-4.25 py-3.25 shadow-(--shadow) max-[760px]:top-3 max-[760px]:right-[2%] max-[480px]:px-3 max-[480px]:py-2.5">
+              <span className="grid size-9.5 place-items-center rounded-xl bg-[#e7f5ec] text-(--green)">
+                <Leaf size={21} aria-hidden="true" />
+              </span>
+              <span className="flex flex-col leading-[1.4]">
+                <b className="text-[0.82rem]">Mulai dari hari ini</b>
+                <small className="text-[0.73rem] text-(--muted) max-[480px]:text-[0.66rem]">
+                  Satu kebiasaan sehat
+                </small>
+              </span>
+            </div>
+            <Salad
+              className="relative z-1 size-[clamp(8rem,16vw,13rem)] rotate-[-8deg] text-(--green) drop-shadow-[0_16px_12px_rgba(38,80,48,0.13)] max-[760px]:size-36 max-[480px]:size-30"
+              strokeWidth={1.25}
+              aria-hidden="true"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+            <div className="absolute bottom-6 left-0 flex items-center gap-2.5 rounded-[15px] border border-[rgba(23,107,80,0.08)] bg-white px-4.25 py-3.25 shadow-(--shadow) max-[760px]:bottom-2.5 max-[760px]:left-[2%] max-[480px]:px-3 max-[480px]:py-2.5">
+              <span className="grid size-9.5 place-items-center rounded-xl bg-[#e7f5ec] text-(--green)">
+                <HeartPulse size={21} aria-hidden="true" />
+              </span>
+              <span className="flex flex-col leading-[1.4]">
+                <b className="text-[0.82rem]">Healthy lifestyle</b>
+                <small className="text-[0.73rem] text-(--muted) max-[480px]:text-[0.66rem]">
+                  Better life, every day
+                </small>
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <section
+          className="flex justify-center gap-[clamp(28px,9vw,130px)] border-b border-(--line) bg-white px-[7%] py-6.5 max-[760px]:justify-around max-[760px]:gap-3.75 max-[760px]:px-[5%] max-[760px]:py-5 max-[480px]:gap-2"
+          aria-label="Fokus website"
+        >
+          {[
+            { value: "4", label: "Topik kesehatan utama" },
+            { value: "7 hari", label: "Tantangan kebiasaan sehat" },
+            { value: "1 langkah", label: "Mulai perubahan hari ini" },
+          ].map((item) => (
+            <div
+              className="flex items-center gap-3 max-[760px]:flex-1 max-[760px]:flex-col max-[760px]:text-center"
+              key={item.value}
+            >
+              <strong className="text-2xl text-(--green) max-[760px]:block max-[480px]:text-[1.15rem]">
+                {item.value}
+              </strong>
+              <span className="max-w-28.75 text-[0.82rem] leading-[1.35] text-(--muted) max-[760px]:mx-auto max-[760px]:block max-[760px]:text-[0.72rem] max-[480px]:text-[0.65rem]">
+                {item.label}
+              </span>
+            </div>
+          ))}
+        </section>
       </main>
-    </div>
+
+      <Footer />
+    </>
   );
 }

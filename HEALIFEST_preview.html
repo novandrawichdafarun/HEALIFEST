@@ -1,0 +1,2168 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="HEALIFEST: edukasi diabetes, hipertensi, kolesterol, asam urat, dan gaya hidup sehat."
+    />
+    <title>HEALIFEST | Healthy Lifestyle, Better Life</title>
+    <style>
+      :root {
+        --green: #176b50;
+        --green-dark: #123f32;
+        --mint: #e8f5ed;
+        --mint-2: #f3f8f4;
+        --bg: #fbfcfa;
+        --ink: #1c332b;
+        --muted: #65776f;
+        --line: #e0e9e2;
+        --gold: #f2c66d;
+        --white: #fff;
+        --shadow: 0 14px 36px rgba(24, 73, 54, 0.08);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 90px;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family:
+          Inter,
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        line-height: 1.7;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      button,
+      input,
+      select {
+        font: inherit;
+      }
+      button,
+      a,
+      select {
+        touch-action: manipulation;
+      }
+      .site-header {
+        height: auto;
+        min-height: 78px;
+        padding: 14px 6.5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        background: rgba(255, 255, 255, 0.94);
+        border-bottom: 1px solid var(--line);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: blur(12px);
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--green);
+        font-weight: 850;
+        font-size: 1.25rem;
+        letter-spacing: 0.4px;
+        line-height: 1.15;
+      }
+      .brand > span:last-child {
+        display: flex;
+        flex-direction: column;
+      }
+      .brand > span:last-child > span {
+        color: var(--green-dark);
+      }
+      .brand small {
+        font-size: 0.66rem;
+        letter-spacing: 0;
+        font-weight: 500;
+        color: var(--muted);
+        margin-top: 4px;
+      }
+      .brand-mark {
+        display: grid;
+        place-items: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 14px;
+        background: var(--green);
+        color: white;
+        font-size: 1.35rem;
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 23px;
+      }
+      nav a {
+        font-size: 0.88rem;
+        font-weight: 650;
+        color: #42584d;
+      }
+      nav a:hover,
+      nav a:focus {
+        color: var(--green);
+      }
+      .menu-toggle {
+        display: none;
+        border: 1px solid var(--line);
+        background: white;
+        border-radius: 10px;
+        padding: 7px 12px;
+        color: var(--green);
+        font-size: 1.2rem;
+      }
+      .hero {
+        padding: 74px 8% 78px;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 40px;
+        align-items: center;
+        background: linear-gradient(
+          120deg,
+          #e8f5ed 0%,
+          #f4faf5 60%,
+          #fdfcf5 100%
+        );
+        overflow: hidden;
+      }
+      .hero-copy {
+        max-width: 680px;
+      }
+      .eyebrow {
+        font-size: 0.73rem;
+        letter-spacing: 1.8px;
+        font-weight: 800;
+        color: var(--green);
+        display: inline-block;
+      }
+      .hero h1 {
+        font-size: clamp(2.7rem, 5vw, 4.5rem);
+        line-height: 1.08;
+        letter-spacing: -2px;
+        margin: 16px 0 22px;
+        color: var(--green-dark);
+        max-width: 720px;
+      }
+      .hero h1 em {
+        font-style: normal;
+        color: var(--green);
+      }
+      .hero-copy > p {
+        font-size: 1.06rem;
+        max-width: 600px;
+        color: #52685c;
+      }
+      .hero-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 26px;
+      }
+      .btn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border: 0;
+        border-radius: 11px;
+        padding: 12px 20px;
+        font-weight: 750;
+        font-size: 0.92rem;
+        cursor: pointer;
+        transition:
+          transform 0.2s,
+          background 0.2s;
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+      .btn-primary {
+        background: var(--green);
+        color: white;
+      }
+      .btn-primary:hover {
+        background: var(--green-dark);
+      }
+      .btn-secondary {
+        background: white;
+        color: var(--green);
+        border: 1px solid #cfe0d4;
+      }
+      .hero-note {
+        margin-top: 23px;
+        color: #52685c;
+        font-size: 0.84rem;
+      }
+      .hero-note span {
+        color: var(--green);
+        font-weight: 900;
+        margin-right: 5px;
+      }
+      .hero-art {
+        min-height: 360px;
+        position: relative;
+        display: grid;
+        place-items: center;
+      }
+      .art-circle {
+        width: min(340px, 75vw);
+        height: min(340px, 75vw);
+        border-radius: 50%;
+        background: radial-gradient(
+          circle at 35% 30%,
+          #fff9e5,
+          #c6e7d2 66%,
+          #a8d4bb
+        );
+        position: absolute;
+      }
+      .art-emoji {
+        position: relative;
+        font-size: clamp(8rem, 16vw, 13rem);
+        filter: drop-shadow(0 16px 12px rgba(38, 80, 48, 0.13));
+        transform: rotate(-8deg);
+      }
+      .art-card {
+        position: absolute;
+        background: white;
+        border: 1px solid rgba(23, 107, 80, 0.08);
+        box-shadow: var(--shadow);
+        padding: 13px 17px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .art-card > span {
+        font-size: 1.5rem;
+      }
+      .art-card div {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.4;
+      }
+      .art-card b {
+        font-size: 0.82rem;
+      }
+      .art-card small {
+        color: var(--muted);
+        font-size: 0.73rem;
+      }
+      .art-card-top {
+        top: 25px;
+        right: 0;
+      }
+      .art-card-bottom {
+        bottom: 24px;
+        left: 0;
+      }
+      .pulse {
+        display: grid;
+        place-items: center;
+        width: 38px;
+        height: 38px;
+        background: #e7f5ec;
+        border-radius: 12px;
+        color: var(--green);
+      }
+      .stats-strip {
+        display: flex;
+        justify-content: center;
+        gap: clamp(28px, 9vw, 130px);
+        padding: 26px 7%;
+        background: white;
+        border-bottom: 1px solid var(--line);
+      }
+      .stats-strip div {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .stats-strip strong {
+        font-size: 1.5rem;
+        color: var(--green);
+      }
+      .stats-strip span {
+        max-width: 115px;
+        color: var(--muted);
+        font-size: 0.82rem;
+        line-height: 1.35;
+      }
+      .section {
+        padding: 76px 7.5%;
+      }
+      .section-heading {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 30px;
+        margin-bottom: 30px;
+      }
+      .section-heading h2 {
+        font-size: clamp(1.8rem, 3.2vw, 2.55rem);
+        line-height: 1.2;
+        letter-spacing: -0.8px;
+        margin: 8px 0 0;
+        color: var(--green-dark);
+      }
+      .section-heading > p {
+        max-width: 430px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.94rem;
+      }
+      .condition-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+      }
+      .condition-card {
+        background: white;
+        border: 1px solid var(--line);
+        padding: 23px;
+        border-radius: 18px;
+        box-shadow: 0 5px 18px rgba(24, 73, 54, 0.035);
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+      .condition-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow);
+      }
+      .condition-icon {
+        width: 55px;
+        height: 55px;
+        display: grid;
+        place-items: center;
+        background: var(--mint);
+        border-radius: 17px;
+        font-size: 1.7rem;
+        margin-bottom: 20px;
+      }
+      .condition-label {
+        font-size: 0.63rem;
+        letter-spacing: 1px;
+        font-weight: 800;
+        color: var(--green);
+      }
+      .condition-card h3 {
+        font-size: 1.2rem;
+        margin: 8px 0;
+      }
+      .condition-card p {
+        font-size: 0.88rem;
+        color: var(--muted);
+        min-height: 95px;
+        margin: 0 0 17px;
+      }
+      .condition-card a {
+        font-size: 0.82rem;
+        font-weight: 800;
+        color: var(--green);
+      }
+      .condition-card a span {
+        margin-left: 5px;
+      }
+      .condition-detail-section {
+        background: #f4f8f4;
+      }
+      .detail-tabs {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+      }
+      .tab-button {
+        border: 1px solid #d5e4d9;
+        background: white;
+        border-radius: 999px;
+        padding: 10px 18px;
+        color: #4d6256;
+        font-weight: 750;
+        cursor: pointer;
+      }
+      .tab-button.active,
+      .tab-button:hover {
+        background: var(--green);
+        border-color: var(--green);
+        color: white;
+      }
+      .detail-panel {
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: clamp(22px, 4vw, 40px);
+        box-shadow: var(--shadow);
+      }
+      .detail-panel[hidden] {
+        display: none;
+      }
+      .detail-title {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid var(--line);
+        margin-bottom: 26px;
+      }
+      .big-icon {
+        width: 76px;
+        height: 76px;
+        border-radius: 22px;
+        background: var(--mint);
+        display: grid;
+        place-items: center;
+        font-size: 2.5rem;
+        flex-shrink: 0;
+      }
+      .detail-title h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin: 3px 0 5px;
+        color: var(--green-dark);
+      }
+      .detail-title p {
+        margin: 0;
+        color: var(--muted);
+      }
+      .detail-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+      .detail-content h3 {
+        font-size: 1.08rem;
+        margin: 0 0 8px;
+        color: var(--green-dark);
+      }
+      .detail-content p,
+      .detail-content li {
+        font-size: 0.91rem;
+        color: #53665b;
+      }
+      .detail-content p {
+        margin: 0 0 20px;
+      }
+      .detail-content ul {
+        padding-left: 21px;
+        margin: 0 0 22px;
+      }
+      .detail-content li {
+        padding-left: 3px;
+        margin: 6px 0;
+      }
+      .info-box {
+        background: var(--mint-2);
+        border: 1px solid #e1eee4;
+        border-radius: 14px;
+        padding: 20px;
+        margin-bottom: 23px;
+      }
+      .info-box p {
+        margin: 0;
+      }
+      .takeaway {
+        background: #fff8e8;
+        border-left: 4px solid var(--gold);
+        border-radius: 0 12px 12px 0;
+        padding: 17px 20px;
+        margin-top: 28px;
+        font-size: 0.9rem;
+        color: #594c2d;
+      }
+      .lifestyle-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+      }
+      .lifestyle-card {
+        padding: 24px;
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 17px;
+      }
+      .lifestyle-emoji {
+        font-size: 2.1rem;
+        margin-bottom: 12px;
+      }
+      .lifestyle-card h3 {
+        margin: 0 0 8px;
+      }
+      .lifestyle-card p {
+        font-size: 0.88rem;
+        color: var(--muted);
+        margin: 0;
+      }
+      .balanced-plate {
+        margin-top: 24px;
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        gap: 30px;
+        align-items: center;
+        background: var(--mint);
+        border-radius: 20px;
+        padding: 28px;
+      }
+      .plate-graphic {
+        width: 190px;
+        height: 190px;
+        border-radius: 50%;
+        border: 8px solid white;
+        box-shadow: 0 5px 18px #1d6b4d15;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        background: conic-gradient(
+          #9dce9b 0 50%,
+          #f2d58b 50% 75%,
+          #e8a88b 75% 100%
+        );
+      }
+      .plate-graphic span {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: 850;
+        color: #204a36;
+        line-height: 1.2;
+      }
+      .plate-graphic span:first-child {
+        grid-column: 1/3;
+      }
+      .plate-graphic small {
+        font-size: 0.62rem;
+        font-weight: 700;
+      }
+      .balanced-plate h3 {
+        font-size: 1.5rem;
+        margin: 7px 0;
+      }
+      .balanced-plate p {
+        margin: 0;
+        color: #53685b;
+      }
+      .assessment-section {
+        background: #f4f8f4;
+      }
+      .assessment-card,
+      .quiz-card,
+      .challenge-card {
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: clamp(22px, 4vw, 38px);
+        box-shadow: var(--shadow);
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr minmax(220px, 0.75fr);
+        gap: 24px;
+        align-items: center;
+        padding: 15px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .form-row label {
+        font-weight: 650;
+        font-size: 0.94rem;
+      }
+      .form-row select {
+        border: 1px solid #d5e0d8;
+        border-radius: 10px;
+        background: #fff;
+        padding: 11px 12px;
+        color: var(--ink);
+        width: 100%;
+      }
+      .assessment-card > .btn {
+        margin-top: 24px;
+      }
+      .result-box {
+        margin-top: 22px;
+        padding: 20px;
+        border-radius: 14px;
+        background: var(--mint);
+        color: var(--green-dark);
+      }
+      .result-box h3 {
+        margin: 0 0 8px;
+      }
+      .result-box ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+      }
+      .quiz-section {
+        background: white;
+      }
+      .quiz-card {
+        max-width: 760px;
+      }
+      .quiz-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+        color: var(--green);
+        font-weight: 850;
+      }
+      .progress-track {
+        height: 8px;
+        background: #e8eee9;
+        border-radius: 999px;
+        overflow: hidden;
+        margin: 18px 0 26px;
+      }
+      .progress-track > div {
+        height: 100%;
+        width: 0;
+        background: var(--green);
+        border-radius: 999px;
+        transition: width 0.25s;
+      }
+      .quiz-card h3 {
+        font-size: 1.35rem;
+        line-height: 1.4;
+        margin: 0 0 22px;
+      }
+      .answer-options {
+        display: grid;
+        gap: 10px;
+      }
+      .answer-option {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        padding: 13px 15px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        cursor: pointer;
+        text-align: left;
+        background: white;
+        color: var(--ink);
+      }
+      .answer-option:hover {
+        border-color: #9ac6aa;
+        background: #f7fbf8;
+      }
+      .answer-option.selected {
+        border-color: var(--green);
+        background: var(--mint);
+      }
+      .answer-option:disabled {
+        cursor: default;
+      }
+      .option-letter {
+        width: 30px;
+        height: 30px;
+        flex-shrink: 0;
+        display: grid;
+        place-items: center;
+        border-radius: 9px;
+        background: #eff4ef;
+        font-weight: 800;
+        color: var(--green);
+      }
+      .quiz-feedback {
+        margin-top: 18px;
+        padding: 15px;
+        border-radius: 12px;
+        background: #f2f8f3;
+        font-size: 0.9rem;
+      }
+      .quiz-controls {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 22px;
+      }
+      .quiz-controls .btn:disabled {
+        opacity: 0.45;
+        cursor: not-allowed;
+        transform: none;
+      }
+      .quiz-final {
+        text-align: center;
+        padding: 25px;
+        background: var(--mint);
+        border-radius: 14px;
+        margin-top: 20px;
+      }
+      .quiz-final strong {
+        display: block;
+        font-size: 2.5rem;
+        color: var(--green);
+      }
+      .challenge-section {
+        background: #f4f8f4;
+      }
+      .challenge-card {
+        max-width: 900px;
+      }
+      .challenge-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+      }
+      .challenge-header h3 {
+        margin: 0;
+        font-size: 1.35rem;
+      }
+      .challenge-header p {
+        margin: 3px 0;
+        color: var(--muted);
+      }
+      .challenge-progress {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        line-height: 1.3;
+      }
+      .challenge-progress strong {
+        font-size: 1.5rem;
+        color: var(--green);
+      }
+      .challenge-progress span {
+        font-size: 0.73rem;
+        color: var(--muted);
+      }
+      .challenge-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin: 20px 0;
+      }
+      .challenge-item {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        padding: 13px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+      }
+      .challenge-item input {
+        accent-color: var(--green);
+        width: 18px;
+        height: 18px;
+      }
+      .challenge-item span {
+        font-size: 0.9rem;
+      }
+      .challenge-item.done {
+        background: var(--mint);
+        border-color: #cfe5d5;
+      }
+      .small-note {
+        font-size: 0.78rem;
+        color: var(--muted);
+        margin-bottom: 0;
+      }
+      .resource-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+      .resource-card {
+        padding: 22px;
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 15px;
+        transition: transform 0.2s;
+      }
+      .resource-card:hover {
+        transform: translateY(-3px);
+        border-color: #a9cdb4;
+      }
+      .resource-card > span {
+        font-size: 0.72rem;
+        color: var(--green);
+        font-weight: 850;
+      }
+      .resource-card h3 {
+        margin: 8px 0;
+      }
+      .resource-card p {
+        font-size: 0.87rem;
+        color: var(--muted);
+        min-height: 70px;
+      }
+      .resource-card b {
+        font-size: 0.82rem;
+        color: var(--green);
+      }
+      .medical-disclaimer {
+        margin: 0 7.5% 65px;
+        background: #fff8e8;
+        border: 1px solid #f0e0b8;
+        border-radius: 16px;
+        padding: 23px;
+        display: flex;
+        gap: 16px;
+        color: #594c2d;
+      }
+      .disclaimer-icon {
+        font-size: 1.6rem;
+      }
+      .medical-disclaimer h3 {
+        margin: 0 0 5px;
+      }
+      .medical-disclaimer p {
+        margin: 0;
+        font-size: 0.88rem;
+      }
+      .site-footer {
+        background: #123f32;
+        color: #e7f3eb;
+        padding: 40px 7.5% 25px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+      }
+      .brand-footer {
+        color: white;
+      }
+      .brand-footer .brand-mark {
+        background: #2d7b5e;
+      }
+      .brand-footer small {
+        color: #c4d8cb;
+      }
+      .site-footer > p {
+        font-size: 0.87rem;
+        color: #c4d8cb;
+      }
+      .footer-links {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+        font-size: 0.82rem;
+      }
+      .site-footer > small {
+        width: 100%;
+        border-top: 1px solid #ffffff26;
+        padding-top: 18px;
+        color: #c4d8cb;
+        font-size: 0.75rem;
+      }
+      @media (max-width: 1050px) {
+        nav {
+          gap: 12px;
+        }
+        nav a {
+          font-size: 0.8rem;
+        }
+        .condition-grid,
+        .lifestyle-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .condition-card p {
+          min-height: unset;
+        }
+        .hero {
+          padding-left: 6%;
+          padding-right: 6%;
+        }
+        .section {
+          padding-left: 6%;
+          padding-right: 6%;
+        }
+      }
+      @media (max-width: 760px) {
+        .site-header {
+          padding: 12px 5%;
+          flex-wrap: wrap;
+        }
+        .menu-toggle {
+          display: block;
+        }
+        nav {
+          display: none;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 100%;
+          padding: 8px 0 12px;
+          gap: 10px;
+        }
+        nav.open {
+          display: flex;
+        }
+        nav a {
+          font-size: 0.95rem;
+        }
+        .hero {
+          grid-template-columns: 1fr;
+          padding: 55px 6% 40px;
+          gap: 5px;
+        }
+        .hero h1 {
+          letter-spacing: -1px;
+        }
+        .hero-art {
+          min-height: 290px;
+        }
+        .art-circle {
+          width: 250px;
+          height: 250px;
+        }
+        .art-emoji {
+          font-size: 9rem;
+        }
+        .art-card-top {
+          right: 2%;
+          top: 12px;
+        }
+        .art-card-bottom {
+          left: 2%;
+          bottom: 10px;
+        }
+        .stats-strip {
+          gap: 15px;
+          padding: 20px 5%;
+          justify-content: space-around;
+        }
+        .stats-strip div {
+          display: block;
+          text-align: center;
+          flex: 1;
+        }
+        .stats-strip strong {
+          display: block;
+        }
+        .stats-strip span {
+          display: block;
+          margin: auto;
+          font-size: 0.72rem;
+        }
+        .section {
+          padding: 55px 5%;
+        }
+        .section-heading {
+          display: block;
+        }
+        .section-heading > p {
+          margin-top: 12px;
+        }
+        .detail-content {
+          grid-template-columns: 1fr;
+          gap: 0;
+        }
+        .detail-title {
+          align-items: flex-start;
+        }
+        .detail-title h2 {
+          font-size: 1.6rem;
+        }
+        .big-icon {
+          width: 58px;
+          height: 58px;
+          font-size: 1.8rem;
+          border-radius: 16px;
+        }
+        .balanced-plate {
+          grid-template-columns: 1fr;
+          justify-items: center;
+          text-align: center;
+        }
+        .form-row {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+        .challenge-list,
+        .resource-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .medical-disclaimer {
+          margin: 0 5% 45px;
+        }
+        .site-footer {
+          padding: 32px 5%;
+          display: block;
+        }
+        .site-footer > p {
+          margin: 18px 0;
+        }
+        .footer-links {
+          margin: 20px 0;
+        }
+        .site-footer > small {
+          display: block;
+        }
+      }
+      @media (max-width: 480px) {
+        .condition-grid,
+        .lifestyle-grid,
+        .challenge-list,
+        .resource-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero h1 {
+          font-size: 2.55rem;
+        }
+        .hero-art {
+          min-height: 260px;
+        }
+        .art-circle {
+          width: 220px;
+          height: 220px;
+        }
+        .art-emoji {
+          font-size: 7.5rem;
+        }
+        .art-card {
+          padding: 10px 12px;
+        }
+        .art-card b {
+          font-size: 0.75rem;
+        }
+        .art-card small {
+          font-size: 0.66rem;
+        }
+        .stats-strip {
+          gap: 8px;
+        }
+        .stats-strip strong {
+          font-size: 1.15rem;
+        }
+        .stats-strip span {
+          font-size: 0.65rem;
+        }
+        .detail-panel {
+          padding: 20px;
+        }
+        .detail-title {
+          gap: 12px;
+        }
+        .detail-title p {
+          font-size: 0.86rem;
+        }
+        .detail-tabs {
+          gap: 6px;
+        }
+        .tab-button {
+          padding: 8px 13px;
+          font-size: 0.82rem;
+        }
+        .assessment-card,
+        .quiz-card,
+        .challenge-card {
+          padding: 20px;
+        }
+        .challenge-header {
+          align-items: flex-start;
+        }
+        .medical-disclaimer {
+          padding: 17px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        *,
+        *::before,
+        *::after {
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#beranda" aria-label="HEALIFEST Beranda"
+        ><span class="brand-mark">♥</span
+        ><span
+          >HEALI<span>FEST</span
+          ><small>Healthy Lifestyle, Better Life.</small></span
+        ></a
+      >
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Buka menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+      <nav id="mainNav" aria-label="Navigasi utama">
+        <a href="#beranda">Beranda</a><a href="#penyakit">Kenali Penyakit</a
+        ><a href="#gaya-hidup">Gaya Hidup</a><a href="#cek">Cek Gaya Hidup</a
+        ><a href="#kuis">Kuis</a><a href="#tantangan">Tantangan</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="beranda">
+        <div class="hero-copy">
+          <span class="eyebrow">YOUR HEALTH, YOUR FUTURE</span>
+          <h1>Sehat dimulai dari <em>kebiasaan kecil.</em></h1>
+          <p>
+            Kenali faktor risiko penyakit tidak menular, temukan informasi yang
+            tepercaya, dan mulai perjalanan menuju hidup yang lebih sehat
+            bersama HEALIFEST.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#penyakit"
+              >Jelajahi Edukasi <span>→</span></a
+            ><a class="btn btn-secondary" href="#kuis">Coba Kuis Sehat</a>
+          </div>
+          <div class="hero-note">
+            <span>✓</span> Edukasi mudah dipahami · Interaktif · Gratis
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Ilustrasi gaya hidup sehat">
+          <div class="art-circle"></div>
+          <div class="art-card art-card-top">
+            <span>🌿</span>
+            <div>
+              <b>Mulai dari hari ini</b><small>Satu kebiasaan sehat</small>
+            </div>
+          </div>
+          <div class="art-emoji">🥗</div>
+          <div class="art-card art-card-bottom">
+            <span class="pulse">♥</span>
+            <div>
+              <b>Healthy lifestyle</b><small>Better life, every day</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-strip" aria-label="Fokus website">
+        <div><strong>4</strong><span>Topik kesehatan utama</span></div>
+        <div><strong>7 hari</strong><span>Tantangan kebiasaan sehat</span></div>
+        <div>
+          <strong>1 langkah</strong><span>Mulai perubahan hari ini</span>
+        </div>
+      </section>
+
+      <section class="section" id="penyakit">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">KENALI & PAHAMI</span>
+            <h2>Kenali penyakit tidak menular</h2>
+          </div>
+          <p>
+            Pengetahuan adalah langkah awal untuk melakukan pencegahan dan
+            mencari pertolongan yang tepat.
+          </p>
+        </div>
+        <div class="condition-grid">
+          <article class="condition-card diabetes">
+            <div class="condition-icon">🩸</div>
+            <span class="condition-label">METABOLIK</span>
+            <h3>Diabetes Melitus</h3>
+            <p>
+              Kondisi ketika kadar glukosa darah tinggi karena gangguan produksi
+              atau kerja insulin.
+            </p>
+            <a href="#diabetes">Pelajari selengkapnya <span>→</span></a>
+          </article>
+          <article class="condition-card hypertension">
+            <div class="condition-icon">💓</div>
+            <span class="condition-label">JANTUNG & PEMBULUH DARAH</span>
+            <h3>Hipertensi</h3>
+            <p>
+              Tekanan darah yang terus tinggi dapat merusak pembuluh darah dan
+              organ jika tidak dikendalikan.
+            </p>
+            <a href="#hipertensi">Pelajari selengkapnya <span>→</span></a>
+          </article>
+          <article class="condition-card cholesterol">
+            <div class="condition-icon">🫀</div>
+            <span class="condition-label">LEMAK DARAH</span>
+            <h3>Kolesterol Tinggi</h3>
+            <p>
+              Kadar lemak darah yang tidak sehat dapat meningkatkan risiko
+              penyakit jantung dan stroke.
+            </p>
+            <a href="#kolesterol">Pelajari selengkapnya <span>→</span></a>
+          </article>
+          <article class="condition-card uric">
+            <div class="condition-icon">🦶</div>
+            <span class="condition-label">SENDI & METABOLIK</span>
+            <h3>Asam Urat</h3>
+            <p>
+              Asam urat tinggi dapat menyebabkan terbentuknya kristal di sendi
+              pada kondisi yang disebut gout.
+            </p>
+            <a href="#asam-urat">Pelajari selengkapnya <span>→</span></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section condition-detail-section">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">PUSAT EDUKASI</span>
+            <h2>Informasi kesehatan lebih lengkap</h2>
+          </div>
+          <p>
+            Pilih topik untuk membaca pengertian, faktor risiko, gejala,
+            komplikasi, pemeriksaan, dan langkah pengelolaan.
+          </p>
+        </div>
+        <div
+          class="detail-tabs"
+          role="tablist"
+          aria-label="Pilih topik penyakit"
+        >
+          <button
+            class="tab-button active"
+            data-target="diabetes"
+            role="tab"
+            aria-selected="true"
+          >
+            Diabetes
+          </button>
+          <button
+            class="tab-button"
+            data-target="hipertensi"
+            role="tab"
+            aria-selected="false"
+          >
+            Hipertensi
+          </button>
+          <button
+            class="tab-button"
+            data-target="kolesterol"
+            role="tab"
+            aria-selected="false"
+          >
+            Kolesterol
+          </button>
+          <button
+            class="tab-button"
+            data-target="asam-urat"
+            role="tab"
+            aria-selected="false"
+          >
+            Asam urat
+          </button>
+        </div>
+
+        <article class="detail-panel active" id="diabetes" role="tabpanel">
+          <div class="detail-title">
+            <span class="big-icon">🩸</span>
+            <div>
+              <span class="eyebrow">TOPIK 01</span>
+              <h2>Diabetes Melitus</h2>
+              <p>
+                Kenali gula darah, insulin, dan pentingnya pemeriksaan berkala.
+              </p>
+            </div>
+          </div>
+          <div class="detail-content">
+            <div>
+              <h3>Apa itu diabetes melitus?</h3>
+              <p>
+                Diabetes melitus adalah penyakit kronis yang ditandai oleh kadar
+                glukosa (gula) darah yang tinggi. Insulin adalah hormon yang
+                membantu glukosa masuk ke sel untuk digunakan sebagai energi.
+                Pada diabetes, tubuh tidak menghasilkan insulin yang cukup atau
+                tidak menggunakan insulin secara efektif.
+              </p>
+              <h3>Jenis diabetes</h3>
+              <ul>
+                <li>
+                  <b>Diabetes tipe 1:</b> tubuh sangat sedikit atau tidak
+                  menghasilkan insulin; umumnya memerlukan insulin setiap hari.
+                </li>
+                <li>
+                  <b>Diabetes tipe 2:</b> tubuh tidak menggunakan insulin secara
+                  efektif dan/atau produksi insulin tidak mencukupi. Ini
+                  merupakan jenis yang paling umum.
+                </li>
+                <li>
+                  <b>Diabetes gestasional:</b> diabetes yang terdeteksi selama
+                  kehamilan dan memerlukan pemantauan tenaga kesehatan.
+                </li>
+              </ul>
+              <h3>Gejala yang perlu dikenali</h3>
+              <p>
+                Sering haus, sering buang air kecil, mudah lelah, penglihatan
+                kabur, dan berat badan turun tanpa sebab yang jelas. Pada
+                diabetes tipe 2, gejala dapat ringan atau tidak terasa selama
+                bertahun-tahun.
+              </p>
+            </div>
+            <div>
+              <div class="info-box">
+                <h3>Faktor risiko tipe 2</h3>
+                <ul>
+                  <li>Berat badan berlebih atau obesitas.</li>
+                  <li>Kurang aktivitas fisik.</li>
+                  <li>Riwayat keluarga diabetes.</li>
+                  <li>
+                    Riwayat diabetes gestasional atau kondisi metabolik
+                    tertentu.
+                  </li>
+                  <li>Usia dan faktor kesehatan lain.</li>
+                </ul>
+              </div>
+              <h3>Komplikasi</h3>
+              <p>
+                Jika tidak dikelola, diabetes dapat merusak pembuluh darah,
+                jantung, ginjal, mata, dan saraf; meningkatkan risiko stroke;
+                serta menyebabkan luka kaki yang sulit sembuh.
+              </p>
+              <h3>Pemeriksaan dan pengelolaan</h3>
+              <p>
+                Diagnosis dilakukan melalui pemeriksaan glukosa darah seperti
+                glukosa puasa, tes toleransi glukosa, atau HbA1c sesuai
+                penilaian tenaga kesehatan. Pengelolaan dapat meliputi pola
+                makan seimbang, aktivitas fisik, pemantauan glukosa, obat atau
+                insulin bila diresepkan, serta pemeriksaan mata, ginjal, dan
+                kaki secara berkala.
+              </p>
+            </div>
+          </div>
+          <div class="takeaway">
+            <b>Langkah sehat:</b> kurangi minuman berpemanis, pilih makanan kaya
+            serat, aktif bergerak, hindari rokok, dan lakukan pemeriksaan sesuai
+            faktor risiko. Diabetes tidak dapat dipastikan hanya dari gejala.
+          </div>
+        </article>
+
+        <article class="detail-panel" id="hipertensi" role="tabpanel" hidden>
+          <div class="detail-title">
+            <span class="big-icon">💓</span>
+            <div>
+              <span class="eyebrow">TOPIK 02</span>
+              <h2>Hipertensi</h2>
+              <p>Tekanan darah tinggi sering tidak menimbulkan gejala.</p>
+            </div>
+          </div>
+          <div class="detail-content">
+            <div>
+              <h3>Apa itu hipertensi?</h3>
+              <p>
+                Hipertensi adalah tekanan darah yang menetap pada tingkat
+                tinggi. Tekanan darah ditulis dengan dua angka: sistolik (saat
+                jantung berkontraksi) dan diastolik (saat jantung beristirahat
+                di antara denyut). WHO menggunakan ambang diagnosis klinis ≥140
+                mmHg sistolik dan/atau ≥90 mmHg diastolik yang terkonfirmasi
+                pada pengukuran di hari berbeda; interpretasi dan target dapat
+                berbeda sesuai kondisi individu dan pedoman setempat.
+              </p>
+              <h3>Gejala</h3>
+              <p>
+                Kebanyakan orang dengan hipertensi tidak merasakan gejala.
+                Karena itu, mengukur tekanan darah merupakan cara penting untuk
+                mengetahuinya. Sakit kepala atau pusing saja tidak cukup untuk
+                memastikan hipertensi.
+              </p>
+              <h3>Faktor risiko</h3>
+              <p>
+                Konsumsi garam berlebihan, kurang aktivitas fisik, merokok,
+                berat badan berlebih, konsumsi alkohol berbahaya, usia, riwayat
+                keluarga, penyakit ginjal, dan diabetes dapat meningkatkan
+                risiko.
+              </p>
+            </div>
+            <div>
+              <div class="info-box">
+                <h3>Komplikasi bila tidak terkendali</h3>
+                <ul>
+                  <li>Serangan jantung dan gagal jantung.</li>
+                  <li>Stroke.</li>
+                  <li>Kerusakan ginjal.</li>
+                  <li>Gangguan pembuluh darah dan penglihatan.</li>
+                </ul>
+              </div>
+              <h3>Pemeriksaan dan pengelolaan</h3>
+              <p>
+                Tekanan darah diukur dengan alat yang sesuai dan teknik yang
+                benar. Istirahat beberapa menit sebelum pengukuran, duduk dengan
+                punggung tersangga, kaki menapak, dan lengan setinggi jantung.
+                Tenaga kesehatan dapat menyarankan pengukuran berulang,
+                perubahan gaya hidup, dan obat sesuai kebutuhan.
+              </p>
+              <h3>Pencegahan</h3>
+              <p>
+                Batasi garam, perbanyak sayur dan buah, aktif bergerak,
+                pertahankan berat badan sehat, berhenti merokok, tidur cukup,
+                dan ikuti pengobatan yang diresepkan.
+              </p>
+            </div>
+          </div>
+          <div class="takeaway">
+            <b>Waspada darurat:</b> tekanan darah sangat tinggi (misalnya
+            sekitar ≥180/120 mmHg) disertai nyeri dada, sesak napas,
+            kebingungan, kelemahan mendadak, atau gangguan penglihatan
+            memerlukan pertolongan medis segera.
+          </div>
+        </article>
+
+        <article class="detail-panel" id="kolesterol" role="tabpanel" hidden>
+          <div class="detail-title">
+            <span class="big-icon">🫀</span>
+            <div>
+              <span class="eyebrow">TOPIK 03</span>
+              <h2>Kolesterol Tinggi</h2>
+              <p>Kenali lemak darah dan kaitannya dengan kesehatan jantung.</p>
+            </div>
+          </div>
+          <div class="detail-content">
+            <div>
+              <h3>Apa itu kolesterol?</h3>
+              <p>
+                Kolesterol adalah zat berlemak yang dibutuhkan tubuh untuk
+                membentuk sel dan hormon. Kolesterol dibawa dalam darah oleh
+                lipoprotein. LDL sering disebut “kolesterol jahat” karena kadar
+                tinggi dapat berkontribusi pada penumpukan plak di arteri; HDL
+                membantu membawa kolesterol kembali ke hati. Trigliserida adalah
+                jenis lemak darah lain yang juga perlu dinilai.
+              </p>
+              <h3>Apakah kolesterol tinggi bergejala?</h3>
+              <p>
+                Biasanya tidak. Seseorang dapat merasa sehat meskipun kadar
+                kolesterolnya tinggi. Karena itu, pemeriksaan profil lipid
+                diperlukan berdasarkan usia, riwayat keluarga, faktor risiko,
+                dan saran tenaga kesehatan.
+              </p>
+              <h3>Faktor risiko</h3>
+              <p>
+                Pola makan tinggi lemak jenuh dan lemak trans, kurang aktivitas
+                fisik, merokok, diabetes, penyakit tertentu, serta faktor
+                keturunan dapat memengaruhi kadar lipid. Kolesterol tinggi juga
+                dapat terjadi pada orang yang sudah menjaga pola hidup sehat
+                karena faktor genetik.
+              </p>
+            </div>
+            <div>
+              <div class="info-box">
+                <h3>Komplikasi</h3>
+                <p>
+                  LDL yang tinggi dapat berkontribusi pada aterosklerosis, yaitu
+                  penumpukan plak pada dinding arteri. Hal ini meningkatkan
+                  risiko penyakit jantung koroner, serangan jantung, dan stroke.
+                </p>
+              </div>
+              <h3>Pemeriksaan</h3>
+              <p>
+                Profil lipid biasanya menilai kolesterol total, LDL, HDL, dan
+                trigliserida. Apakah perlu berpuasa sebelum tes bergantung pada
+                instruksi fasilitas kesehatan dan jenis pemeriksaan. Target
+                kolesterol ditentukan berdasarkan risiko kardiovaskular
+                seseorang, bukan satu angka untuk semua orang.
+              </p>
+              <h3>Pencegahan dan pengelolaan</h3>
+              <p>
+                Pilih sayur, buah, kacang-kacangan, biji-bijian utuh, dan sumber
+                protein yang lebih rendah lemak jenuh. Batasi gorengan dan
+                makanan ultra-proses, aktif bergerak, hindari rokok, dan lakukan
+                pemeriksaan. Sebagian orang memerlukan obat penurun lipid sesuai
+                penilaian dokter.
+              </p>
+            </div>
+          </div>
+          <div class="takeaway">
+            <b>Ingat:</b> kolesterol tinggi tidak dapat dinilai dari penampilan
+            atau gejala saja. Jangan menghentikan obat penurun kolesterol tanpa
+            berkonsultasi dengan dokter.
+          </div>
+        </article>
+
+        <article class="detail-panel" id="asam-urat" role="tabpanel" hidden>
+          <div class="detail-title">
+            <span class="big-icon">🦶</span>
+            <div>
+              <span class="eyebrow">TOPIK 04</span>
+              <h2>Asam Urat dan Gout</h2>
+              <p>Pahami perbedaan kadar asam urat tinggi dan serangan gout.</p>
+            </div>
+          </div>
+          <div class="detail-content">
+            <div>
+              <h3>Apa itu asam urat?</h3>
+              <p>
+                Asam urat merupakan zat yang terbentuk saat tubuh memecah purin,
+                senyawa yang terdapat secara alami di dalam tubuh dan beberapa
+                makanan. Asam urat biasanya dikeluarkan melalui ginjal. Bila
+                kadarnya tinggi, kristal urat dapat terbentuk dan menumpuk di
+                sendi pada sebagian orang, menyebabkan gout. Kadar tinggi tidak
+                selalu berarti seseorang mengalami gout.
+              </p>
+              <h3>Gejala gout</h3>
+              <p>
+                Serangan gout dapat menyebabkan nyeri sendi yang muncul
+                mendadak, bengkak, kemerahan, dan rasa panas. Sering mengenai
+                pangkal ibu jari kaki, tetapi sendi lain juga dapat terkena.
+                Kadar asam urat darah saja tidak selalu cukup untuk memastikan
+                penyebab nyeri sendi.
+              </p>
+              <h3>Faktor risiko</h3>
+              <p>
+                Riwayat keluarga, gangguan ginjal, beberapa obat, konsumsi
+                alkohol, minuman tinggi fruktosa, dan makanan tinggi purin
+                tertentu dapat berperan. Berat badan dan kondisi metabolik juga
+                dapat berkaitan.
+              </p>
+            </div>
+            <div>
+              <div class="info-box">
+                <h3>Komplikasi</h3>
+                <ul>
+                  <li>Serangan berulang dan nyeri sendi.</li>
+                  <li>Benjolan kristal urat (tofi) pada gout kronis.</li>
+                  <li>Kerusakan sendi jika penyakit tidak terkontrol.</li>
+                  <li>
+                    Pada sebagian orang, batu ginjal dapat berkaitan dengan asam
+                    urat.
+                  </li>
+                </ul>
+              </div>
+              <h3>Pemeriksaan dan pengelolaan</h3>
+              <p>
+                Dokter dapat menilai gejala, pemeriksaan fisik, kadar asam urat,
+                dan bila perlu memeriksa cairan sendi atau melakukan pemeriksaan
+                lain. Penanganan serangan dan pencegahan jangka panjang berbeda.
+                Obat harus dipilih tenaga kesehatan berdasarkan kondisi ginjal,
+                obat lain, dan faktor individu.
+              </p>
+              <h3>Pencegahan</h3>
+              <p>
+                Minum air secukupnya bila tidak ada pembatasan cairan dari
+                dokter, batasi alkohol dan minuman berpemanis, atur pola makan
+                seimbang, dan kelola berat badan secara bertahap. Hindari diet
+                ekstrem. Orang dengan gout mungkin membutuhkan obat penurun asam
+                urat meski sudah mengubah pola hidup.
+              </p>
+            </div>
+          </div>
+          <div class="takeaway">
+            <b>Segera periksa:</b> sendi yang mendadak merah, panas, bengkak dan
+            sangat nyeri—terutama jika disertai demam—perlu dinilai segera
+            karena infeksi sendi dapat menyerupai gout.
+          </div>
+        </article>
+      </section>
+
+      <section class="section lifestyle-section" id="gaya-hidup">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">KEBIASAAN SEHAT</span>
+            <h2>Bangun gaya hidup lebih baik</h2>
+          </div>
+          <p>
+            Mulai dari perubahan kecil yang realistis dan lakukan secara
+            konsisten.
+          </p>
+        </div>
+        <div class="lifestyle-grid">
+          <article class="lifestyle-card">
+            <div class="lifestyle-emoji">🥦</div>
+            <h3>Makan seimbang</h3>
+            <p>
+              Utamakan sayur, buah, sumber protein, dan makanan kaya serat.
+              Batasi garam, gula tambahan, serta lemak jenuh dan trans.
+            </p>
+          </article>
+          <article class="lifestyle-card">
+            <div class="lifestyle-emoji">🚶</div>
+            <h3>Aktif bergerak</h3>
+            <p>
+              Kurangi duduk terlalu lama dan pilih aktivitas yang sesuai
+              kemampuan. Orang dewasa umumnya dianjurkan melakukan aktivitas
+              aerobik intensitas sedang sekitar 150 menit per minggu.
+            </p>
+          </article>
+          <article class="lifestyle-card">
+            <div class="lifestyle-emoji">😴</div>
+            <h3>Tidur cukup</h3>
+            <p>
+              Bangun jadwal tidur yang teratur dan ciptakan suasana tidur yang
+              nyaman. Kebutuhan tidur berbeda menurut usia dan kondisi.
+            </p>
+          </article>
+          <article class="lifestyle-card">
+            <div class="lifestyle-emoji">🧘</div>
+            <h3>Kelola stres</h3>
+            <p>
+              Coba latihan napas, relaksasi, aktivitas yang disukai, dan
+              berbicara dengan orang tepercaya saat membutuhkan dukungan.
+            </p>
+          </article>
+        </div>
+        <div class="balanced-plate">
+          <div class="plate-graphic">
+            <span>½<br /><small>Sayur & buah</small></span
+            ><span>¼<br /><small>Protein</small></span
+            ><span>¼<br /><small>Karbohidrat</small></span>
+          </div>
+          <div>
+            <span class="eyebrow">PANDUAN SEDERHANA</span>
+            <h3>Isi piring lebih beragam</h3>
+            <p>
+              Gunakan prinsip porsi seimbang sebagai panduan umum, bukan aturan
+              medis yang kaku. Kebutuhan makan dapat berbeda pada orang dengan
+              diabetes, penyakit ginjal, gout, atau kondisi lain. Konsultasikan
+              kebutuhan khusus kepada tenaga kesehatan atau ahli gizi.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section assessment-section" id="cek">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">REFLEKSI DIRI</span>
+            <h2>Cek kebiasaan hidupmu</h2>
+          </div>
+          <p>
+            Kuesioner edukatif ini membantu mengenali kebiasaan yang dapat
+            diperbaiki. Ini bukan alat diagnosis atau prediksi penyakit.
+          </p>
+        </div>
+        <form id="assessmentForm" class="assessment-card">
+          <div class="form-row">
+            <label for="fruit">Seberapa sering kamu makan sayur dan buah?</label
+            ><select id="fruit" name="fruit" required>
+              <option value="">Pilih jawaban</option>
+              <option value="2">Setiap hari</option>
+              <option value="1">Beberapa kali seminggu</option>
+              <option value="0">Jarang</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="activity"
+              >Apakah kamu aktif bergerak atau berolahraga?</label
+            ><select id="activity" name="activity" required>
+              <option value="">Pilih jawaban</option>
+              <option value="2">Teratur hampir setiap minggu</option>
+              <option value="1">Kadang-kadang</option>
+              <option value="0">Jarang</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="sweet">Seberapa sering minum minuman manis?</label
+            ><select id="sweet" name="sweet" required>
+              <option value="">Pilih jawaban</option>
+              <option value="2">Jarang atau tidak pernah</option>
+              <option value="1">Beberapa kali seminggu</option>
+              <option value="0">Setiap hari atau beberapa kali sehari</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="smoke"
+              >Apakah kamu merokok atau menggunakan tembakau?</label
+            ><select id="smoke" name="smoke" required>
+              <option value="">Pilih jawaban</option>
+              <option value="2">Tidak</option>
+              <option value="0">Ya</option>
+              <option value="1">Sedang berusaha berhenti</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="checkup"
+              >Apakah kamu memeriksa kesehatan sesuai anjuran atau faktor
+              risiko?</label
+            ><select id="checkup" name="checkup" required>
+              <option value="">Pilih jawaban</option>
+              <option value="2">Ya</option>
+              <option value="1">Belum rutin</option>
+              <option value="0">Belum pernah / tidak tahu</option>
+            </select>
+          </div>
+          <button class="btn btn-primary" type="submit">
+            Lihat Ringkasan Kebiasaan
+          </button>
+          <div
+            id="assessmentResult"
+            class="result-box"
+            aria-live="polite"
+            hidden
+          ></div>
+        </form>
+      </section>
+
+      <section class="section quiz-section" id="kuis">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">UJI PENGETAHUAN</span>
+            <h2>Kuis kesehatan HEALIFEST</h2>
+          </div>
+          <p>
+            Jawab lima pertanyaan singkat untuk menguji pemahaman tentang PTM.
+          </p>
+        </div>
+        <div class="quiz-card" id="quizCard">
+          <div class="quiz-top">
+            <span id="quizProgress">PERTANYAAN 1 DARI 5</span>
+            <div class="progress-track"><div id="progressBar"></div></div>
+          </div>
+          <h3 id="questionText"></h3>
+          <div id="answerOptions" class="answer-options"></div>
+          <div
+            id="quizFeedback"
+            class="quiz-feedback"
+            aria-live="polite"
+            hidden
+          ></div>
+          <div class="quiz-controls">
+            <button id="nextQuestion" class="btn btn-primary" disabled>
+              Jawaban berikutnya →</button
+            ><button id="restartQuiz" class="btn btn-secondary" hidden>
+              Ulangi kuis
+            </button>
+          </div>
+          <div id="quizFinal" class="quiz-final" hidden></div>
+        </div>
+      </section>
+
+      <section class="section challenge-section" id="tantangan">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">MULAI DARI SEKARANG</span>
+            <h2>Tantangan sehat 7 hari</h2>
+          </div>
+          <p>
+            Tandai aktivitas yang sudah dilakukan. Progres disimpan di browser
+            pada perangkat ini.
+          </p>
+        </div>
+        <div class="challenge-card">
+          <div class="challenge-header">
+            <div>
+              <h3>One Week, Better You</h3>
+              <p>Satu langkah baik setiap hari.</p>
+            </div>
+            <div class="challenge-progress">
+              <strong id="challengeCount">0/7</strong><span>hari selesai</span>
+            </div>
+          </div>
+          <div class="progress-track"><div id="challengeBar"></div></div>
+          <div id="challengeList" class="challenge-list"></div>
+          <button id="resetChallenge" class="btn btn-secondary">
+            Atur ulang tantangan
+          </button>
+          <p class="small-note">
+            Pilih kegiatan sesuai kemampuan. Jika memiliki kondisi medis atau
+            pembatasan aktivitas/cairan, ikuti saran tenaga kesehatan.
+          </p>
+        </div>
+      </section>
+
+      <section class="section resources-section" id="referensi">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">BACA LEBIH LANJUT</span>
+            <h2>Sumber informasi tepercaya</h2>
+          </div>
+          <p>
+            Konten HEALIFEST merupakan ringkasan edukasi. Gunakan sumber
+            kesehatan tepercaya dan konsultasikan keputusan medis dengan tenaga
+            profesional.
+          </p>
+        </div>
+        <div class="resource-grid">
+          <a
+            class="resource-card"
+            href="https://www.who.int/news-room/fact-sheets/detail/diabetes"
+            target="_blank"
+            rel="noopener"
+            ><span>🌐 WHO</span>
+            <h3>Diabetes</h3>
+            <p>Fakta, gejala, pencegahan, diagnosis, dan pengelolaan.</p>
+            <b>Buka sumber ↗</b></a
+          >
+          <a
+            class="resource-card"
+            href="https://www.who.int/en/news-room/fact-sheets/detail/hypertension"
+            target="_blank"
+            rel="noopener"
+            ><span>🌐 WHO</span>
+            <h3>Hipertensi</h3>
+            <p>Deteksi tekanan darah tinggi, faktor risiko, dan penanganan.</p>
+            <b>Buka sumber ↗</b></a
+          >
+          <a
+            class="resource-card"
+            href="https://medlineplus.gov/cholesterol.html"
+            target="_blank"
+            rel="noopener"
+            ><span>🌐 MedlinePlus / NIH</span>
+            <h3>Kolesterol</h3>
+            <p>Penjelasan kolesterol, pemeriksaan, dan pengelolaan.</p>
+            <b>Buka sumber ↗</b></a
+          >
+          <a
+            class="resource-card"
+            href="https://www.nhs.uk/conditions/gout/"
+            target="_blank"
+            rel="noopener"
+            ><span>🌐 NHS</span>
+            <h3>Gout / Asam urat</h3>
+            <p>Gejala, penyebab, pemeriksaan, dan perawatan gout.</p>
+            <b>Buka sumber ↗</b></a
+          >
+          <a
+            class="resource-card"
+            href="https://www.who.int/news-room/fact-sheets/detail/healthy-diet"
+            target="_blank"
+            rel="noopener"
+            ><span>🌐 WHO</span>
+            <h3>Pola makan sehat</h3>
+            <p>
+              Prinsip gizi seimbang dan pembatasan garam, gula, serta lemak
+              tidak sehat.
+            </p>
+            <b>Buka sumber ↗</b></a
+          >
+        </div>
+      </section>
+
+      <section class="medical-disclaimer">
+        <span class="disclaimer-icon">ⓘ</span>
+        <div>
+          <h3>Catatan keselamatan kesehatan</h3>
+          <p>
+            HEALIFEST adalah media edukasi, bukan alat diagnosis, layanan
+            konsultasi medis, atau pengganti pemeriksaan. Jangan memulai,
+            mengubah, atau menghentikan obat berdasarkan informasi website ini.
+            Hubungi tenaga kesehatan untuk penilaian pribadi. Jika mengalami
+            nyeri dada, sesak berat, kelemahan mendadak, gangguan bicara, atau
+            gejala darurat lainnya, segera cari pertolongan medis.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand brand-footer" href="#beranda"
+        ><span class="brand-mark">♥</span
+        ><span>HEALIFEST<small>Healthy Lifestyle, Better Life.</small></span></a
+      >
+      <p>Membangun kebiasaan sehat, satu langkah setiap hari.</p>
+      <div class="footer-links">
+        <a href="#penyakit">Edukasi PTM</a><a href="#referensi">Referensi</a
+        ><a href="#beranda">Kembali ke atas ↑</a>
+      </div>
+      <small>© 2026 HEALIFEST · Proyek edukasi kesehatan</small>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Mobile navigation
+        const menuToggle = document.getElementById("menuToggle");
+        const mainNav = document.getElementById("mainNav");
+        menuToggle.addEventListener("click", () => {
+          const open = mainNav.classList.toggle("open");
+          menuToggle.setAttribute("aria-expanded", String(open));
+          menuToggle.textContent = open ? "✕" : "☰";
+        });
+        mainNav.querySelectorAll("a").forEach((link) =>
+          link.addEventListener("click", () => {
+            mainNav.classList.remove("open");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.textContent = "☰";
+          }),
+        );
+
+        // Tabs for four educational topics
+        const tabs = [...document.querySelectorAll(".tab-button")];
+        const panels = [...document.querySelectorAll(".detail-panel")];
+        function activatePanel(id) {
+          tabs.forEach((tab) => {
+            const active = tab.dataset.target === id;
+            tab.classList.toggle("active", active);
+            tab.setAttribute("aria-selected", String(active));
+          });
+          panels.forEach((panel) => {
+            const active = panel.id === id;
+            panel.classList.toggle("active", active);
+            panel.hidden = !active;
+          });
+        }
+        tabs.forEach((tab) =>
+          tab.addEventListener("click", () =>
+            activatePanel(tab.dataset.target),
+          ),
+        );
+        document.querySelectorAll('a[href^="#"]').forEach((link) => {
+          link.addEventListener("click", () => {
+            const id = link.getAttribute("href").slice(1);
+            if (
+              ["diabetes", "hipertensi", "kolesterol", "asam-urat"].includes(id)
+            )
+              activatePanel(id);
+          });
+        });
+
+        // Educational lifestyle questionnaire: descriptive feedback, not a medical risk score.
+        const assessmentForm = document.getElementById("assessmentForm");
+        const assessmentResult = document.getElementById("assessmentResult");
+        assessmentForm.addEventListener("submit", (event) => {
+          event.preventDefault();
+          if (!assessmentForm.reportValidity()) return;
+          const data = new FormData(assessmentForm);
+          const score = [
+            "fruit",
+            "activity",
+            "sweet",
+            "smoke",
+            "checkup",
+          ].reduce((sum, key) => sum + Number(data.get(key)), 0);
+          const tips = [];
+          if (Number(data.get("fruit")) < 2)
+            tips.push(
+              "Tambahkan sayur dan buah secara bertahap dalam menu harian.",
+            );
+          if (Number(data.get("activity")) < 2)
+            tips.push(
+              "Cari aktivitas yang cocok, misalnya berjalan kaki, dan tingkatkan secara bertahap.",
+            );
+          if (Number(data.get("sweet")) < 2)
+            tips.push(
+              "Kurangi frekuensi minuman manis dan pilih air putih bila sesuai kondisi kesehatan.",
+            );
+          if (Number(data.get("smoke")) < 2)
+            tips.push(
+              "Pertimbangkan dukungan tenaga kesehatan atau layanan berhenti merokok.",
+            );
+          if (Number(data.get("checkup")) < 2)
+            tips.push(
+              "Diskusikan pemeriksaan tekanan darah, gula darah, dan lipid berdasarkan usia serta faktor risiko.",
+            );
+          let title = "Kebiasaan baik yang bisa dipertahankan";
+          if (score <= 4) title = "Mulai dari satu perubahan kecil";
+          else if (score <= 7) title = "Ada kebiasaan yang bisa ditingkatkan";
+          assessmentResult.innerHTML =
+            `<h3>${title}</h3><p>Ringkasan kebiasaan: ${score} dari 10 poin pada kuesioner edukatif ini. Angka ini bukan ukuran risiko penyakit.</p>` +
+            (tips.length
+              ? `<p><b>Saran yang bisa dipertimbangkan:</b></p><ul>${tips.map((t) => `<li>${t}</li>`).join("")}</ul>`
+              : "<p>Pertahankan kebiasaan baik dan tetap lakukan pemeriksaan kesehatan sesuai kebutuhan.</p>") +
+            `<p class="small-note">Hasil ini bukan diagnosis, tidak tervalidasi sebagai instrumen klinis, dan tidak menggantikan konsultasi tenaga kesehatan.</p>`;
+          assessmentResult.hidden = false;
+          assessmentResult.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest",
+          });
+        });
+
+        // Knowledge quiz
+        const questions = [
+          {
+            q: "Mengapa diabetes melitus perlu dideteksi dan dikelola?",
+            options: [
+              "Karena selalu menimbulkan nyeri hebat sejak awal",
+              "Karena gula darah tinggi dapat merusak organ bila tidak dikelola",
+              "Karena hanya menyerang anak-anak",
+            ],
+            answer: 1,
+            explain:
+              "Diabetes dapat berlangsung tanpa gejala jelas dan memengaruhi jantung, mata, ginjal, pembuluh darah, serta saraf.",
+          },
+          {
+            q: "Apa cara utama mengetahui apakah seseorang memiliki hipertensi?",
+            options: [
+              "Menilai apakah sering sakit kepala",
+              "Mengukur tekanan darah dengan benar dan melakukan penilaian kesehatan",
+              "Melihat warna kulit",
+            ],
+            answer: 1,
+            explain:
+              "Hipertensi sering tidak bergejala. Pengukuran tekanan darah dan evaluasi tenaga kesehatan diperlukan.",
+          },
+          {
+            q: "Apakah kolesterol tinggi selalu menimbulkan gejala?",
+            options: [
+              "Ya, selalu menyebabkan pusing",
+              "Tidak, sering kali tidak menimbulkan gejala",
+              "Ya, selalu menyebabkan nyeri sendi",
+            ],
+            answer: 1,
+            explain:
+              "Pemeriksaan profil lipid diperlukan karena kolesterol tinggi sering tidak terasa.",
+          },
+          {
+            q: "Apa hubungan asam urat dengan gout?",
+            options: [
+              "Asam urat tinggi selalu berarti gout",
+              "Kristal urat dapat terbentuk di sendi dan menyebabkan gout pada sebagian orang",
+              "Gout hanya disebabkan kurang minum",
+            ],
+            answer: 1,
+            explain:
+              "Kadar asam urat tinggi tidak selalu menyebabkan gout; diagnosis mempertimbangkan gejala dan pemeriksaan.",
+          },
+          {
+            q: "Kebiasaan mana yang mendukung pencegahan PTM?",
+            options: [
+              "Merokok untuk mengurangi stres",
+              "Menghentikan obat ketika merasa sehat",
+              "Makan seimbang, aktif bergerak, dan melakukan pemeriksaan sesuai kebutuhan",
+            ],
+            answer: 2,
+            explain:
+              "Pola makan seimbang, aktivitas fisik, tidak merokok, dan perawatan preventif membantu mengurangi risiko.",
+          },
+        ];
+        let questionIndex = 0,
+          answers = [];
+        const questionText = document.getElementById("questionText");
+        const answerOptions = document.getElementById("answerOptions");
+        const quizProgress = document.getElementById("quizProgress");
+        const progressBar = document.getElementById("progressBar");
+        const quizFeedback = document.getElementById("quizFeedback");
+        const nextQuestion = document.getElementById("nextQuestion");
+        const restartQuiz = document.getElementById("restartQuiz");
+        const quizFinal = document.getElementById("quizFinal");
+
+        function renderQuestion() {
+          const item = questions[questionIndex];
+          quizProgress.textContent = `PERTANYAAN ${questionIndex + 1} DARI ${questions.length}`;
+          progressBar.style.width = `${(questionIndex / questions.length) * 100}%`;
+          questionText.textContent = item.q;
+          answerOptions.innerHTML = "";
+          quizFeedback.hidden = true;
+          quizFeedback.textContent = "";
+          nextQuestion.disabled = true;
+          nextQuestion.hidden = false;
+          restartQuiz.hidden = true;
+          quizFinal.hidden = true;
+          item.options.forEach((option, index) => {
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = "answer-option";
+            button.innerHTML = `<span class="option-letter">${String.fromCharCode(65 + index)}</span><span>${option}</span>`;
+            button.addEventListener("click", () => selectAnswer(index));
+            answerOptions.appendChild(button);
+          });
+        }
+        function selectAnswer(index) {
+          if (answers[questionIndex] !== undefined) return;
+          answers[questionIndex] = index;
+          const item = questions[questionIndex];
+          [...answerOptions.children].forEach((button, i) => {
+            button.disabled = true;
+            if (i === index) button.classList.add("selected");
+          });
+          quizFeedback.innerHTML = `<b>${index === item.answer ? "Benar!" : "Belum tepat."}</b> ${item.explain}`;
+          quizFeedback.hidden = false;
+          nextQuestion.disabled = false;
+          nextQuestion.textContent =
+            questionIndex === questions.length - 1
+              ? "Lihat hasil kuis →"
+              : "Pertanyaan berikutnya →";
+        }
+        function showFinal() {
+          const score = answers.reduce(
+            (sum, answer, i) => sum + (answer === questions[i].answer ? 1 : 0),
+            0,
+          );
+          questionText.textContent = "Kuis selesai!";
+          answerOptions.innerHTML = "";
+          quizFeedback.hidden = true;
+          nextQuestion.hidden = true;
+          restartQuiz.hidden = false;
+          progressBar.style.width = "100%";
+          quizProgress.textContent = "HASIL KUIS";
+          quizFinal.innerHTML = `<strong>${score}/${questions.length}</strong><h3>${score >= 4 ? "Bagus! Terus belajar." : "Yuk, pelajari lagi materi HEALIFEST."}</h3><p>Skor ini mengukur jawaban pada kuis edukasi singkat, bukan status kesehatanmu.</p>`;
+          quizFinal.hidden = false;
+        }
+        nextQuestion.addEventListener("click", () => {
+          if (answers[questionIndex] === undefined) return;
+          if (questionIndex < questions.length - 1) {
+            questionIndex++;
+            renderQuestion();
+          } else showFinal();
+        });
+        restartQuiz.addEventListener("click", () => {
+          questionIndex = 0;
+          answers = [];
+          renderQuestion();
+        });
+        renderQuestion();
+
+        // Seven-day habit challenge. Stored locally in this browser only.
+        const activities = [
+          "Hari 1 — Tambahkan sayur atau buah pada menu hari ini.",
+          "Hari 2 — Bergerak aktif sesuai kemampuan selama beberapa menit.",
+          "Hari 3 — Pilih air putih sebagai pengganti minuman manis bila sesuai.",
+          "Hari 4 — Sisihkan waktu untuk relaksasi atau latihan napas.",
+          "Hari 5 — Batasi makanan tinggi garam dan perhatikan label pangan.",
+          "Hari 6 — Atur jadwal tidur dan kurangi layar menjelang tidur.",
+          "Hari 7 — Rencanakan satu kebiasaan sehat untuk dilanjutkan.",
+        ];
+        const storageKey = "healifest-challenge-v1";
+        let checkedDays = [];
+        try {
+          checkedDays = JSON.parse(localStorage.getItem(storageKey) || "[]");
+        } catch (_) {
+          checkedDays = [];
+        }
+        const challengeList = document.getElementById("challengeList");
+        const challengeCount = document.getElementById("challengeCount");
+        const challengeBar = document.getElementById("challengeBar");
+        function renderChallenge() {
+          challengeList.innerHTML = "";
+          activities.forEach((activity, index) => {
+            const label = document.createElement("label");
+            label.className =
+              "challenge-item" + (checkedDays.includes(index) ? " done" : "");
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.checked = checkedDays.includes(index);
+            checkbox.addEventListener("change", () => {
+              if (checkbox.checked && !checkedDays.includes(index))
+                checkedDays.push(index);
+              if (!checkbox.checked)
+                checkedDays = checkedDays.filter((day) => day !== index);
+              checkedDays.sort((a, b) => a - b);
+              try {
+                localStorage.setItem(storageKey, JSON.stringify(checkedDays));
+              } catch (_) {}
+              renderChallenge();
+            });
+            const text = document.createElement("span");
+            text.textContent = activity;
+            label.append(checkbox, text);
+            challengeList.appendChild(label);
+          });
+          challengeCount.textContent = `${checkedDays.length}/7`;
+          challengeBar.style.width = `${(checkedDays.length / 7) * 100}%`;
+        }
+        document
+          .getElementById("resetChallenge")
+          .addEventListener("click", () => {
+            if (confirm("Atur ulang semua checklist tantangan tujuh hari?")) {
+              checkedDays = [];
+              try {
+                localStorage.removeItem(storageKey);
+              } catch (_) {}
+              renderChallenge();
+            }
+          });
+        renderChallenge();
+      });
+    </script>
+  </body>
+</html>
