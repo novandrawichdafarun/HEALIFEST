@@ -17,7 +17,7 @@ export default function CekGayaHidupPage() {
 
       <main>
         <section className="bg-[#f4f8f4] px-[7.5%] py-19 max-[760px]:px-[5%] max-[760px]:py-13.75">
-          <div className="mb-7.5 flex items-end justify-between gap-7.5 max-[760px]:block">
+          <div className="mb-7.5 items-end justify-between gap-7.5">
             <div>
               <span className="inline-block text-[0.73rem] font-extrabold tracking-[1.8px] text-(--green)">
                 REFLEKSI DIRI
@@ -26,7 +26,7 @@ export default function CekGayaHidupPage() {
                 Cek kebiasaan hidupmu
               </h1>
             </div>
-            <p className="max-w-107.5 text-[0.94rem] text-(--muted) max-[760px]:mt-3">
+            <p className="max-w-107.5 text-[0.94rem] text-(--muted) mt-3">
               Kuesioner edukatif ini membantu mengenali kebiasaan yang dapat
               diperbaiki. Ini bukan alat diagnosis atau prediksi penyakit.
             </p>

@@ -13,15 +13,23 @@ export default function KuisPenyakitPage() {
   const quizzes = getAllQuizzes();
 
   return (
-    <main className="px-[5vw] py-12">
-      <section className="mx-auto max-w-225">
-        <h1 className="text-3xl font-extrabold text-(--green-dark)">
-          Kuis Penyakit
-        </h1>
-        <p className="mt-2 max-w-prose text-(--muted)">
-          Pilih topik untuk menguji pemahamanmu. Kuis ini untuk edukasi, bukan
-          alat diagnosis.
-        </p>
+    <main>
+      <section className="px-[7.5%] py-19 max-[760px]:px-[5%] max-[760px]:py-13.75">
+        <div className="mb-7.5 items-end justify-between gap-7.5">
+          <div>
+            <span className="inline-block text-[0.73rem] font-extrabold tracking-[1.8px] text-(--green)">
+              KUIS PENYAKIT
+            </span>
+            <h1 className="mt-2 text-[clamp(1.8rem,3.2vw,2.55rem)] font-bold leading-[1.2] tracking-[-0.8px] text-(--green-dark)">
+              Uji pemahamanmu tentang penyakit tidak menular
+            </h1>
+          </div>
+          <p className="max-w-107.5 text-[0.94rem] text-(--muted) mt-3">
+            Kuis ini dirancang untuk edukasi, bukan alat diagnosis. Jawaban yang
+            benar akan memberikan pemahaman yang lebih baik tentang penyakit
+            tidak menular.
+          </p>
+        </div>
 
         <ul className="mt-8 grid gap-3 sm:grid-cols-2">
           {quizzes.map((quiz) => (

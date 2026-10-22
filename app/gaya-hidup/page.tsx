@@ -18,7 +18,7 @@ export default function GayaHidupPage() {
           className="px-[7.5%] py-19 max-[760px]:px-[5%] max-[760px]:py-13.75"
           id="gaya-hidup"
         >
-          <div className="mb-7.5 flex items-end justify-between gap-7.5 max-[760px]:block">
+          <div className="mb-7.5 items-end justify-between gap-7.5">
             <div>
               <span className="inline-block text-[0.73rem] font-extrabold tracking-[1.8px] text-(--green)">
                 KEBIASAAN SEHAT
@@ -27,7 +27,7 @@ export default function GayaHidupPage() {
                 Bangun gaya hidup lebih baik
               </h1>
             </div>
-            <p className="max-w-107.5 text-[0.94rem] text-(--muted) max-[760px]:mt-3">
+            <p className="max-w-107.5 text-[0.94rem] text-(--muted) mt-3">
               Mulai dari perubahan kecil yang realistis dan lakukan secara
               konsisten.
             </p>

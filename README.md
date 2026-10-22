@@ -1,36 +1,132 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HEALIFEST
 
-## Getting Started
+HEALIFEST adalah aplikasi web edukasi kesehatan yang membantu pengguna
+mengenali penyakit tidak menular, memahami kebiasaan hidup sehat, dan
+mengevaluasi pemahaman melalui kuis. Konten di aplikasi ini bersifat edukatif,
+bukan pengganti diagnosis atau saran dari tenaga kesehatan.
 
-First, run the development server:
+## Fitur
+
+- Beranda yang memperkenalkan tujuan dan konten HEALIFEST.
+- Informasi penyakit tidak menular, termasuk diabetes, hipertensi, kolesterol,
+  dan asam urat.
+- Kuis interaktif untuk menguji pemahaman tentang penyakit.
+- Panduan kebiasaan hidup sehat dan kuesioner refleksi gaya hidup.
+- Video edukasi yang diputar melalui YouTube.
+- Halaman metadata, sitemap, dan robots untuk mendukung mesin pencari.
+
+## Teknologi
+
+- [Next.js 16](https://nextjs.org/) dengan App Router
+- [React 19](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/) dengan konfigurasi strict
+- [Tailwind CSS 4](https://tailwindcss.com/)
+- [Lucide React](https://lucide.dev/) untuk ikon
+- Three.js untuk visual interaktif
+- React Player untuk pemutaran video
+- ESLint dengan konfigurasi Next.js untuk linting
+
+## Persyaratan
+
+- Node.js dan npm versi yang kompatibel dengan Next.js 16
+- Git (opsional, jika meng-clone repositori)
+
+## Cara Instalasi
+
+1. Clone repositori dan masuk ke folder proyek:
+
+   ```bash
+   git clone https://github.com/novandrawichdafarun/HEALIFEST.git
+   cd HEALIFEST
+   ```
+
+2. Pasang dependensi:
+
+   ```bash
+   npm install
+   ```
+
+## Cara Menjalankan
+
+Jalankan server pengembangan:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Buka [http://localhost:3000](http://localhost:3000) di browser. Perubahan pada
+source akan dimuat saat pengembangan.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Untuk menjalankan versi produksi secara lokal:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+## Perintah yang Tersedia
 
-To learn more about Next.js, take a look at the following resources:
+| Perintah        | Keterangan                              |
+| --------------- | --------------------------------------- |
+| `npm run dev`   | Menjalankan server pengembangan Next.js |
+| `npm run lint`  | Memeriksa kode menggunakan ESLint       |
+| `npm run build` | Membuat build produksi                  |
+| `npm run start` | Menjalankan build produksi              |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Halaman Aplikasi
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Rute                        | Isi                                |
+| --------------------------- | ---------------------------------- |
+| `/`                         | Beranda                            |
+| `/penyakit`                 | Ringkasan dan informasi penyakit   |
+| `/kuis-penyakit`            | Daftar kuis penyakit               |
+| `/kuis-penyakit/[penyakit]` | Kuis untuk topik penyakit tertentu |
+| `/gaya-hidup`               | Panduan kebiasaan hidup sehat      |
+| `/cek-gaya-hidup`           | Kuesioner refleksi kebiasaan hidup |
+| `/video-edukasi`            | Kumpulan video edukasi             |
 
-## Deploy on Vercel
+Rute `/kuis-penyakit?penyakit=<id>` diarahkan ke rute kuis yang sesuai.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Struktur Folder
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```text
+app/                     Rute halaman, layout, metadata, dan file SEO Next.js
+  cek-gaya-hidup/        Halaman kuesioner gaya hidup
+  gaya-hidup/            Halaman panduan gaya hidup sehat
+  kuis-penyakit/         Daftar kuis dan halaman kuis dinamis
+  penyakit/              Halaman informasi penyakit
+  video-edukasi/         Halaman video edukasi
+components/              Komponen antarmuka yang digunakan ulang
+  error/                 Tampilan untuk kondisi error/not found
+  layouts/               Navbar dan footer
+constants/               Konten statis dan konfigurasi data aplikasi
+helpers/                 Fungsi utilitas dan pengolahan data
+public/                  Aset statis yang disajikan langsung
+styles/                  CSS global dan tema
+types/                   Definisi tipe TypeScript
+```
+
+## Style dan Antarmuka
+
+- Utilitas kelas Tailwind CSS digunakan langsung pada komponen untuk layout,
+  spacing, warna, tipografi, dan breakpoint responsif.
+- `styles/globals.css` memuat import Tailwind, variabel warna tema HEALIFEST,
+  font stack, dan aturan dasar global.
+- Komponen ditulis sebagai React dengan TypeScript; alias `@/` mengarah ke root
+  proyek.
+- Ikon antarmuka menggunakan Lucide React.
+
+## Konten dan Aset
+
+Konten utama aplikasi disimpan pada `constants/` agar data seperti topik
+penyakit, kebiasaan, navigasi, kuis, dan video terpisah dari presentasi
+komponen. Aset lokal disimpan di `public/` dan dapat dirujuk dengan path
+berawalan `/`. Gambar jarak jauh yang digunakan oleh `next/image` perlu
+diizinkan pada konfigurasi `images.remotePatterns` di `next.config.ts`.
+
+## Catatan
+
+Hasil kuesioner dan kuis ditujukan untuk edukasi serta refleksi pribadi. Hasil
+tersebut tidak digunakan untuk mendiagnosis kondisi kesehatan. Jika memiliki
+keluhan atau membutuhkan penilaian medis, konsultasikan dengan tenaga
+kesehatan.

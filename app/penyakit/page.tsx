@@ -1,12 +1,13 @@
 import Footer from "@/components/layouts/Footer";
 import Navbar from "@/components/layouts/Navbar";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Stethoscope } from "lucide-react";
 
 import type { Metadata } from "next";
 import DiseaseTabs from "@/components/DiseaseTabs";
 import InfoBlockView from "@/components/InfoBlockView";
-import { conditions } from "@/constants/conditions";
+import { conditions, diseaseBanners } from "@/constants/conditions";
 
 export const metadata: Metadata = {
   title: "Kenali Penyakit | HEALIFEST",
@@ -20,8 +21,9 @@ export default function PenyakitPage() {
       <Navbar />
 
       <main>
+        {/* Ringkasan Kartu Penyakit */}
         <section className="px-[7.5%] py-19 max-[760px]:px-[5%] max-[760px]:py-13.75">
-          <div className="mb-7.5 flex items-end justify-between gap-7.5 max-[760px]:block">
+          <div className="mb-7.5 items-end justify-between gap-7.5">
             <div>
               <span className="inline-block text-[0.73rem] font-extrabold tracking-[1.8px] text-(--green)">
                 KENALI &amp; PAHAMI
@@ -30,7 +32,7 @@ export default function PenyakitPage() {
                 Kenali penyakit tidak menular
               </h1>
             </div>
-            <p className="max-w-107.5 text-[0.94rem] text-(--muted) max-[760px]:mt-3">
+            <p className="mt-3 max-w-107.5 text-[0.94rem] text-(--muted)">
               Pengetahuan adalah langkah awal untuk melakukan pencegahan dan
               mencari pertolongan yang tepat.
             </p>
@@ -77,11 +79,12 @@ export default function PenyakitPage() {
           </div>
         </section>
 
+        {/* Pusat Edukasi (Header Menggunakan Component Next.js Image) */}
         <section
           className="scroll-mt-22.5 bg-[#f4f8f4] px-[7.5%] py-19 max-[760px]:px-[5%] max-[760px]:py-13.75"
           id="disease-details"
         >
-          <div className="mb-7.5 flex items-end justify-between gap-7.5 max-[760px]:block">
+          <div className="mb-7.5 items-end justify-between gap-7.5">
             <div>
               <span className="inline-block text-[0.73rem] font-extrabold tracking-[1.8px] text-(--green)">
                 PUSAT EDUKASI
@@ -90,7 +93,7 @@ export default function PenyakitPage() {
                 Informasi kesehatan lebih lengkap
               </h2>
             </div>
-            <p className="max-w-107.5 text-[0.94rem] text-(--muted) max-[760px]:mt-3">
+            <p className="mt-3 max-w-107.5 text-[0.94rem] text-(--muted)">
               Pilih topik untuk membaca pengertian, faktor risiko, gejala,
               komplikasi, pemeriksaan, dan langkah pengelolaan.
             </p>
@@ -103,57 +106,79 @@ export default function PenyakitPage() {
             }))}
             panels={conditions.map((condition) => {
               const Icon = condition.icon;
+              const bannerImage =
+                diseaseBanners[condition.id] ||
+                "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1200&q=80";
 
               return (
                 <article
-                  className="rounded-[20px] border border-(--line) bg-white p-[clamp(22px,4vw,40px)] shadow-(--shadow)"
+                  className="overflow-hidden rounded-[20px] border border-(--line) bg-white shadow-(--shadow)"
                   key={condition.id}
                 >
-                  <div className="mb-6.5 flex items-center gap-4.5 border-b border-(--line) pb-6 max-[760px]:items-start">
-                    <span className="grid size-19 shrink-0 place-items-center rounded-[22px] bg-(--mint) text-(--green) max-[760px]:size-14.5 max-[760px]:rounded-2xl">
-                      <Icon
-                        size={38}
-                        className="max-[760px]:size-8"
-                        aria-hidden="true"
-                      />
-                    </span>
-                    <div>
-                      <span className="inline-block text-[0.73rem] font-extrabold tracking-[1.8px] text-(--green)">
-                        TOPIK {condition.number}
+                  {/* Header Topik Ekstra Lebar & Tinggi */}
+                  <div className="relative flex min-h-[240px] items-center overflow-hidden bg-(--green-dark) px-8 py-14 text-white sm:min-h-[300px] sm:px-12 sm:py-20">
+                    {/* Komponen Optimasi Gambar Next.js */}
+                    <Image
+                      src={bannerImage}
+                      alt={`Latar belakang ${condition.name}`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 1200px"
+                      className="object-cover opacity-40 mix-blend-overlay"
+                      priority={condition.number === "01"}
+                    />
+                    {/* Lapisan Gradasi Gelap */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/25 to-transparent" />
+
+                    {/* Konten Utama Header */}
+                    <div className="relative z-10 flex items-center gap-6 max-[760px]:flex-col max-[760px]:items-start">
+                      <span className="grid size-20 shrink-0 place-items-center rounded-[24px] bg-white/20 backdrop-blur-md text-white shadow-md max-[760px]:size-16 max-[760px]:rounded-2xl">
+                        <Icon
+                          size={42}
+                          className="max-[760px]:size-9"
+                          aria-hidden="true"
+                        />
                       </span>
-                      <h3 className="mt-1 text-2xl font-bold leading-[1.2] text-(--green-dark) max-[760px]:text-[1.6rem]">
-                        {condition.name}
-                      </h3>
-                      <p className="text-[0.91rem] text-(--muted)">
-                        {condition.detailSummary}
-                      </p>
+                      <div className="space-y-1.5">
+                        <span className="inline-block text-[0.78rem] font-extrabold tracking-[2px] text-(--mint)">
+                          TOPIK {condition.number}
+                        </span>
+                        <h3 className="text-3xl font-bold leading-[1.2] text-white max-[760px]:text-2xl">
+                          {condition.name}
+                        </h3>
+                        <p className="max-w-3xl text-[0.98rem] text-slate-100 leading-relaxed">
+                          {condition.detailSummary}
+                        </p>
+                      </div>
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-8 max-[760px]:grid-cols-1 max-[760px]:gap-1">
-                    <div>
-                      {condition.left.map((block) => (
-                        <InfoBlockView block={block} key={block.title} />
-                      ))}
+                  {/* Bagian Isi Penjelasan Dua Kolom & Kuis */}
+                  <div className="p-[clamp(22px,4vw,40px)]">
+                    <div className="grid grid-cols-2 gap-8 max-[760px]:grid-cols-1 max-[760px]:gap-1">
+                      <div>
+                        {condition.left.map((block) => (
+                          <InfoBlockView block={block} key={block.title} />
+                        ))}
+                      </div>
+                      <div>
+                        {condition.right.map((block) => (
+                          <InfoBlockView block={block} key={block.title} />
+                        ))}
+                      </div>
                     </div>
-                    <div>
-                      {condition.right.map((block) => (
-                        <InfoBlockView block={block} key={block.title} />
-                      ))}
-                    </div>
-                  </div>
 
-                  <p className="mt-7 rounded-r-xl border-l-4 border-(--gold) bg-[#fff8e8] px-5 py-4.25 text-[0.9rem] text-[#594c2d]">
-                    <strong>{condition.takeawayLabel}</strong>{" "}
-                    {condition.takeaway}
-                  </p>
-                  <Link
-                    className="mt-6 inline-flex items-center justify-center gap-2 rounded-[11px] bg-(--green) px-5 py-3 text-[0.92rem] font-bold text-white no-underline transition-colors hover:bg-(--green-dark)"
-                    href={`/kuis-penyakit?penyakit=${condition.id}`}
-                  >
-                    Ikuti kuis {condition.name}
-                    <ArrowRight size={17} aria-hidden="true" />
-                  </Link>
+                    <p className="mt-7 rounded-r-xl border-l-4 border-(--gold) bg-[#fff8e8] px-5 py-4.25 text-[0.9rem] text-[#594c2d]">
+                      <strong>{condition.takeawayLabel}</strong>{" "}
+                      {condition.takeaway}
+                    </p>
+                    <Link
+                      className="mt-6 inline-flex items-center justify-center gap-2 rounded-[11px] bg-(--green) px-5 py-3 text-[0.92rem] font-bold text-white no-underline transition-colors hover:bg-(--green-dark)"
+                      href={`/kuis-penyakit?penyakit=${condition.id}`}
+                    >
+                      Ikuti kuis {condition.name}
+                      <ArrowRight size={17} aria-hidden="true" />
+                    </Link>
+                  </div>
                 </article>
               );
             })}

@@ -1,8 +1,7 @@
 import { Condition } from "@/types/penyakit";
 import { Activity, Droplet, HeartPulse, Stethoscope } from "lucide-react";
 
-export const conditions
-: Condition[] = [
+export const conditions: Condition[] = [
   {
     id: "diabetes",
     number: "01",
@@ -233,3 +232,14 @@ export const conditions
     takeawayLabel: "Segera periksa:",
   },
 ];
+
+export const diseaseBanners: Record<string, string> = {
+  diabetes:
+    "https://images.unsplash.com/photo-1683727186226-910f31a9da45?auto=format&fit=crop&w=1200&q=80",
+  hipertensi:
+    "https://images.unsplash.com/photo-1615486511484-92e172cc4fe0?auto=format&fit=crop&w=1200&q=80",
+  kolesterol:
+    "https://images.unsplash.com/photo-1778864874378-c3aa56a744c5?auto=format&fit=crop&w=1200&q=80",
+  "asam-urat":
+    "https://images.unsplash.com/photo-1434973539530-5538b4681aac?auto=format&fit=crop&w=1200&q=80",
+};

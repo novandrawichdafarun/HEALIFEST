@@ -28,8 +28,11 @@ export default function Navbar() {
   }, [isMenuOpen]);
 
   return (
-    <header id="top" className="sticky top-0 z-40 border-b border-(--line) bg-white/90 shadow-[0_1px_0_rgba(24,73,54,0.03),0_8px_24px_-16px_rgba(24,73,54,0.18)] backdrop-blur-md">
-      <div className="flex min-h-20 items-center justify-between gap-6 px-[7.5%] py-2 max-[760px]:gap-4 max-[760px]:px-[5%]">
+    <header
+      id="top"
+      className="sticky top-0 z-40 border-b border-(--line) bg-white/90 shadow-[0_1px_0_rgba(24,73,54,0.03),0_8px_24px_-16px_rgba(24,73,54,0.18)] backdrop-blur-md"
+    >
+      <div className="flex min-h-20 items-center justify-between gap-6 px-[7.5%] py-2 md:gap-4 md:px-[5%]">
         <Link
           aria-label="HEALIFEST, ke halaman beranda"
           className={`flex shrink-0 items-center rounded-lg no-underline touch-manipulation ${focusRing}`}
@@ -38,7 +41,7 @@ export default function Navbar() {
         >
           <Image
             alt="HEALIFEST — Healthy Lifestyle, Better Life."
-            className="h-auto w-[min(230px,62vw)] object-contain max-[760px]:w-[min(190px,58vw)]"
+            className="h-auto w-[min(230px,62vw)] object-contain md:w-[min(190px,58vw)]"
             height={334}
             priority
             src="/icon2.png"
@@ -48,7 +51,7 @@ export default function Navbar() {
 
         <nav
           aria-label="Navigasi utama"
-          className="hidden h-full items-stretch gap-1 md:flex"
+          className="hidden h-full items-stretch gap-1 lg:flex"
         >
           {navLinks.map(({ href, label }) => {
             const isActive = isActivePath(pathname, href);
@@ -74,7 +77,7 @@ export default function Navbar() {
           aria-controls="mobile-nav"
           aria-expanded={isMenuOpen}
           aria-label={isMenuOpen ? "Tutup menu" : "Buka menu"}
-          className={`grid size-10.5 cursor-pointer place-items-center rounded-xl border border-(--line) bg-white text-(--green) touch-manipulation transition-colors hover:bg-(--mint-2) md:hidden ${focusRing}`}
+          className={`grid size-10.5 cursor-pointer place-items-center rounded-xl border border-(--line) bg-white text-(--green) touch-manipulation transition-colors hover:bg-(--mint-2) lg:hidden ${focusRing}`}
           onClick={() => setIsMenuOpen((open) => !open)}
           type="button"
         >
@@ -87,7 +90,7 @@ export default function Navbar() {
       </div>
 
       <div
-        className={`grid transition-[grid-template-rows] duration-200 ease-out motion-reduce:transition-none md:hidden ${
+        className={`grid transition-[grid-template-rows] duration-200 ease-out motion-reduce:transition-none lg:hidden ${
           isMenuOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
         }`}
       >

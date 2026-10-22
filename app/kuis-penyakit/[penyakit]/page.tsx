@@ -28,8 +28,10 @@ async function KuisPenyakitDetailContent({ params }: Props) {
   if (!quiz) notFound();
 
   return (
-    <main className="px-[5vw] py-12">
-      <DiseaseQuiz key={quiz.id} quiz={quiz} />
+    <main>
+      <section className="px-[7.5%] py-19 max-[760px]:px-[5%] max-[760px]:py-13.75">
+        <DiseaseQuiz key={quiz.id} quiz={quiz} />
+      </section>
     </main>
   );
 }
