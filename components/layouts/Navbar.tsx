@@ -2,7 +2,8 @@
 
 import { focusRing, navLinks } from "@/constants/navbar";
 import { isActivePath } from "@/helpers";
-import { Heart, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -27,28 +28,22 @@ export default function Navbar() {
   }, [isMenuOpen]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-(--line) bg-white/90 shadow-[0_1px_0_rgba(24,73,54,0.03),0_8px_24px_-16px_rgba(24,73,54,0.18)] backdrop-blur-md">
-      <div className="flex h-20 items-center justify-between gap-6 px-[7.5%] max-[760px]:px-[5%]">
+    <header id="top" className="sticky top-0 z-40 border-b border-(--line) bg-white/90 shadow-[0_1px_0_rgba(24,73,54,0.03),0_8px_24px_-16px_rgba(24,73,54,0.18)] backdrop-blur-md">
+      <div className="flex min-h-20 items-center justify-between gap-6 px-[7.5%] py-2 max-[760px]:gap-4 max-[760px]:px-[5%]">
         <Link
           aria-label="HEALIFEST, ke halaman beranda"
-          className={`flex items-center gap-3 rounded-lg text-(--green) no-underline touch-manipulation ${focusRing}`}
+          className={`flex shrink-0 items-center rounded-lg no-underline touch-manipulation ${focusRing}`}
           href="/"
           onClick={closeMenu}
         >
-          <span
-            aria-hidden="true"
-            className="grid size-10.5 shrink-0 place-items-center rounded-[14px] bg-(--green) text-white shadow-[0_6px_14px_-6px_rgba(23,107,80,0.6)]"
-          >
-            <Heart size={21} fill="currentColor" />
-          </span>
-          <span className="flex flex-col leading-none">
-            <span className="text-[1.25rem] font-extrabold tracking-[0.5px]">
-              HEALI<span className="text-(--green-dark)">FEST</span>
-            </span>
-            <span className="mt-1.5 text-[0.66rem] font-medium tracking-[0.2px] text-(--muted) max-[360px]:hidden">
-              Healthy Lifestyle, Better Life.
-            </span>
-          </span>
+          <Image
+            alt="HEALIFEST — Healthy Lifestyle, Better Life."
+            className="h-auto w-[min(230px,62vw)] object-contain max-[760px]:w-[min(190px,58vw)]"
+            height={334}
+            priority
+            src="/icon2.png"
+            width={1000}
+          />
         </Link>
 
         <nav

@@ -1,5 +1,6 @@
 import { focusRing, footerLinks } from "@/constants/footer";
-import { ArrowUp, Heart, Info } from "lucide-react";
+import { ArrowUp, Info } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -9,23 +10,16 @@ export default function Footer() {
         <div>
           <Link
             aria-label="HEALIFEST, kembali ke beranda"
-            className={`inline-flex items-center gap-3 rounded-lg text-white no-underline touch-manipulation ${focusRing}`}
+            className={`inline-flex max-w-full items-center rounded-lg no-underline touch-manipulation ${focusRing}`}
             href="/"
           >
-            <span
-              aria-hidden="true"
-              className="grid size-10.5 shrink-0 place-items-center rounded-[14px] bg-[#2d7b5e] text-white"
-            >
-              <Heart size={21} fill="currentColor" />
-            </span>
-            <span className="flex flex-col leading-none">
-              <span className="text-[1.25rem] font-extrabold tracking-[0.5px]">
-                HEALIFEST
-              </span>
-              <span className="mt-1.5 text-[0.66rem] font-medium tracking-[0.2px] text-[#c4d8cb]">
-                Healthy Lifestyle, Better Life.
-              </span>
-            </span>
+            <Image
+              alt=""
+              className="h-auto w-[min(250px,70vw)] rounded-xl p-1.5 max-[760px]:w-[min(300px,80vw)]"
+              height={334}
+              src="/icon2.png"
+              width={1000}
+            />
           </Link>
           <p className="mt-5 max-w-sm text-[0.88rem] leading-[1.7] text-[#c4d8cb]">
             Membangun kebiasaan sehat, satu langkah setiap hari. Media edukasi
@@ -75,7 +69,7 @@ export default function Footer() {
         <small>© 2026 HEALIFEST · Proyek edukasi kesehatan</small>
         <a
           className={`inline-flex items-center gap-1.5 rounded-sm font-semibold text-[#e7f3eb] no-underline transition-colors hover:text-white ${focusRing}`}
-          href="#"
+          href="#top"
         >
           Kembali ke atas
           <ArrowUp size={14} aria-hidden="true" />
