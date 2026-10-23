@@ -28,9 +28,21 @@ export const conditions: Condition[] = [
         ],
       },
       {
-        title: "Gejala yang perlu dikenali",
-        paragraphs: [
-          "Sering haus, sering buang air kecil, mudah lelah, penglihatan kabur, dan berat badan turun tanpa sebab yang jelas. Pada diabetes tipe 2, gejala dapat ringan atau tidak terasa selama bertahun-tahun.",
+        title: "Gejala Utama (Trias Diabetes / 3P)",
+        bullets: [
+          "Poliuria (Sering buang air kecil) : Frekuensi buang air kecil meningkat, terutama pada malam hari, karena ginjal berusaha membuang kelebihan gula melalui urine.",
+          "Polidipsi (Sering merasa haus) : Rasa haus yang berlebihan dan terus-menerus muncul akibat tubuh mengalami dehidrasi dari seringnya buang air kecil.",
+          "Polifagi (Cepat lapar dan banyak makan) : Sel-sel tubuh kekurangan energi karena glukosa tidak bisa masuk dengan baik, sehingga otak mengirim sinyal rasa lapar.",
+        ],
+      },
+      {
+        title: "Gejala Umum Lainnya",
+        bullets: [
+          "Penurunan berat badan: Terjadi tanpa alasan yang jelas karena tubuh membakar cadangan lemak dan otot akibat glukosa tidak bisa diolah menjadi energi.",
+          "Mudah lelah dan lemah: Tubuh kekurangan pasokan energi utama dari glukosa.",
+          "Penglihatan kabur: Kadar gula darah tinggi merusak pembuluh darah kecil di retina mata.",
+          "Luka sulit sembuh: Sirkulasi darah yang buruk dan kadar gula tinggi menghambat proses regenerasi jaringan.",
+          "Kesemutan atau mati rasa: Sering terasa di bagian tangan dan kaki sebagai tanda awal kerusakan saraf (neuropati diabetik).",
         ],
       },
     ],
@@ -58,6 +70,17 @@ export const conditions: Condition[] = [
           "Diagnosis dilakukan melalui pemeriksaan glukosa darah seperti glukosa puasa, tes toleransi glukosa, atau HbA1c sesuai penilaian tenaga kesehatan. Pengelolaan dapat meliputi pola makan seimbang, aktivitas fisik, pemantauan glukosa, obat atau insulin bila diresepkan, serta pemeriksaan mata, ginjal, dan kaki secara berkala.",
         ],
       },
+      {
+        title: "Cara Mengontrol Gula Darah",
+        bullets: [
+          "Makan secara teratur dan batasi makanan manis.",
+          "Perbanyak sayur, buah, kacang-kacangan, dan biji-bijian.",
+          "Lakukan aktivitas fisik sekitar 30 menit, 3–4 kali seminggu.",
+          "Minum obat atau insulin sesuai anjuran tenaga kesehatan.",
+          "Periksa gula darah secara rutin.",
+          "Rawat kaki dengan baik dan periksa luka secara berkala",
+        ],
+      },
     ],
     takeaway:
       "Kurangi minuman berpemanis, pilih makanan kaya serat, aktif bergerak, hindari rokok, dan lakukan pemeriksaan sesuai faktor risiko. Diabetes tidak dapat dipastikan hanya dari gejala.",
@@ -77,18 +100,45 @@ export const conditions: Condition[] = [
         title: "Apa itu hipertensi?",
         paragraphs: [
           "Hipertensi adalah tekanan darah yang menetap pada tingkat tinggi. Tekanan darah ditulis dengan dua angka: sistolik (saat jantung berkontraksi) dan diastolik (saat jantung beristirahat di antara denyut). WHO menggunakan ambang diagnosis klinis ≥140 mmHg sistolik dan/atau ≥90 mmHg diastolik yang terkonfirmasi pada pengukuran di hari berbeda; interpretasi dan target dapat berbeda sesuai kondisi individu dan pedoman setempat.",
+          "Hasil pengukuran tekanan darah akan diklasifikasikan sebagai berikut:",
+        ],
+        bullets: [
+          "Normal: <130/85 mmHg",
+          "Meningkat: 130–139/85–89 mmHg",
+          "Hipertensi tingkat 1: 140–159/90–99 mmHg",
+          "Hipertensi tingkat 2: ≥160/100 mmHg",
         ],
       },
       {
         title: "Gejala",
         paragraphs: [
-          "Kebanyakan orang dengan hipertensi tidak merasakan gejala. Karena itu, mengukur tekanan darah merupakan cara penting untuk mengetahuinya. Sakit kepala atau pusing saja tidak cukup untuk memastikan hipertensi.",
+          "Hipertensi sering disebut sebagai silent killer karena umumnya tidak menimbulkan gejala. Pada banyak kasus, gejala baru muncul ketika tekanan darah sudah sangat tinggi atau terjadi komplikasi.",
+        ],
+        bullets: [
+          "Sakit kepala",
+          "Penglihatan kabur",
+          "Gelisah dan Pusing/vertigo",
+          "Sakit bagian dada",
+          "Jantung bedebar-debar",
+          "Mudah lelah",
+          "Nyeri dada",
         ],
       },
       {
-        title: "Faktor risiko",
+        title: "Faktor risiko hipertensi",
         paragraphs: [
-          "Konsumsi garam berlebihan, kurang aktivitas fisik, merokok, berat badan berlebih, konsumsi alkohol berbahaya, usia, riwayat keluarga, penyakit ginjal, dan diabetes dapat meningkatkan risiko.",
+          "Hipertensi dapat dialami oleh siapa saja, tetapi risiko akan meningkat pada orang dengan kondisi berikut:",
+        ],
+        bullets: [
+          "Berusia di atas 65 tahun",
+          "Sedang hamil",
+          "Jarang berolahraga atau melakukan aktivitas fisik",
+          "Kurang mengonsumsi makanan yang mengandung kalium",
+          "Memiliki riwayat keluarga dengan hipertensi",
+          "Mengalami obesitas, diabetes, penyakit ginjal, atau sleep apnea",
+          "Mengonsumsi terlalu banyak makanan tinggi garam",
+          "Mengonsumsi terlalu banyak kafein",
+          "Merokok dan mengonsumsi minuman beralkohol",
         ],
       },
     ],
@@ -115,6 +165,33 @@ export const conditions: Condition[] = [
           "Batasi garam, perbanyak sayur dan buah, aktif bergerak, pertahankan berat badan sehat, berhenti merokok, tidur cukup, dan ikuti pengobatan yang diresepkan.",
         ],
       },
+      {
+        title: "Ayok cegah hipertensi dengan CERDIK & PATUH",
+        emphasized: true,
+      },
+      {
+        title: "Kendalikan Hipertensi",
+        paragraphs: ["PATUH:"],
+        bullets: [
+          "P: Periksa kesehatan secara rutin",
+          "A: Atasi dengan pengobatan yang tepat",
+          "T: Tetap diet dengan gizi seimbang",
+          "U: Upayakan aktifitas fisik",
+          "H: Hindari Asap rokok, alkahol dll.",
+        ],
+      },
+      {
+        title: "Pencegahan Hipertensi",
+        paragraphs: ["CERDIK:"],
+        bullets: [
+          "C:  Cek kesehatan secara rutin",
+          "E: Enyakan asap rokok",
+          "R: Rajin olahraga",
+          "D: Diet seimbang",
+          "I: Istirahat cukup",
+          "K: Kelola stress",
+        ],
+      },
     ],
     takeaway:
       "Tekanan darah sangat tinggi (misalnya sekitar ≥180/120 mmHg) disertai nyeri dada, sesak napas, kebingungan, kelemahan mendadak, atau gangguan penglihatan memerlukan pertolongan medis segera.",
@@ -137,25 +214,78 @@ export const conditions: Condition[] = [
         ],
       },
       {
-        title: "Apakah kolesterol tinggi bergejala?",
-        paragraphs: [
-          "Biasanya tidak. Seseorang dapat merasa sehat meskipun kadar kolesterolnya tinggi. Karena itu, pemeriksaan profil lipid diperlukan berdasarkan usia, riwayat keluarga, faktor risiko, dan saran tenaga kesehatan.",
+        title: "Nilai Kolesterol Normal",
+        bullets: [
+          "Kolesterol Total: Kurang dari 200 mg/dL",
+          "LDL: Kurang dari 100 mg/dL",
+          "HDL: 60 mg/dL atau lebih (risiko meningkat jika kurang dari 40–50 mg/dL)",
+          "Trigliserida: Kurang dari 150 mg/dL",
         ],
       },
       {
-        title: "Faktor risiko",
+        title: "Penyebab dan Faktor Risiko Kolesterol Tinggi",
         paragraphs: [
-          "Pola makan tinggi lemak jenuh dan lemak trans, kurang aktivitas fisik, merokok, diabetes, penyakit tertentu, serta faktor keturunan dapat memengaruhi kadar lipid. Kolesterol tinggi juga dapat terjadi pada orang yang sudah menjaga pola hidup sehat karena faktor genetik.",
+          "Kolesterol dapat berbahaya bagi tubuh jika kadarnya terlalu tinggi. Seseorang berisiko mengalami kolesterol tinggi atau hiperkolesterolemia apabila memiliki beberapa faktor. Sebagian faktor tersebut dapat dikendalikan, sedangkan sebagian lainnya tidak.",
+          "Beberapa faktor yang dapat meningkatkan risiko terjadinya kolesterol tinggi adalah:",
+        ],
+      },
+      {
+        title: "1)	Gaya hidup",
+        paragraphs: [
+          "Gaya hidup tidak sehat merupakan penyebab paling umum tingginya kadar kolesterol dalam tubuh. Beberapa contoh gaya hidup tidak sehat adalah:",
+        ],
+        bullets: [
+          "Merokok",
+          "Jarang berolahraga atau melakukan aktivitas fisik",
+          "Mengonsumsi minuman beralkohol secara berlebihan",
+          "Mengonsumsi makanan tinggi kolesterol dan lemak jenuh,  seperti gorengan, susu full cream, kulit ayam, dan jeroan",
+          "Mengalami stres",
+        ],
+      },
+      {
+        title: "2)	Penyakit",
+        paragraphs: [
+          "Meningkatnya kadar kolesterol juga dapat terjadi akibat menderita penyakit tertentu. Beberapa penyakitnya adalah:",
+        ],
+        bullets: [
+          "Obesitas atau kelebihan berat badan",
+          "Diabetes",
+          "Hipotiroidisme",
+          "Gagal ginjal kronis",
+          "HIV/AIDS",
+        ],
+      },
+      {
+        title: "3)	Keturunan",
+        paragraphs: [
+          "Kolesterol tinggi dapat disebabkan oleh perubahan atau mutasi sejumlah gen yang diturunkan dari kedua orang tua. Mutasi gen ini membuat tubuh tidak bisa membuang kolesterol dari dalam darah. Namun, kolesterol tinggi akibat kondisi ini lebih jarang terjadi bila dibandingkan dengan faktor-faktor lainnya.",
+          "Selain beberapa faktor di atas, seseorang yang berusia 40 tahun ke atas juga lebih berisiko menderita kolesterol. Hal ini terjadi karena seiring bertambahnya usia, hati menjadi kurang mampu membuang kolesterol jahat (LDL).",
         ],
       },
     ],
     right: [
       {
-        title: "Komplikasi",
+        title: "Komplikasi Kolesterol Tinggi",
         paragraphs: [
-          "LDL yang tinggi dapat berkontribusi pada aterosklerosis, yaitu penumpukan plak pada dinding arteri. Hal ini meningkatkan risiko penyakit jantung koroner, serangan jantung, dan stroke.",
+          "Kadar kolesterol yang berlebihan perlu ditangani. Apabila dibiarkan, kolesterol akan menumpuk di dinding pembuluh darah arteri dan membentuk plak sehingga membuat arteri menyempit. Kondisi ini disebut dengan aterosklerosis.",
+          "Aterosklerosis yang tidak ditanganidapat membuat aliran darah tersumbat dan menimbulkan komplikasi serius berikut ini:",
+        ],
+        bullets: [
+          "Penyakit jantung koroner",
+          "Serangan jantung",
+          "Penyakit ginjal",
+          "Penyakit arteri perifer",
+          "Stroke",
+          "Tekanan darah tinggi",
+          "Batu empedu",
         ],
         emphasized: true,
+      },
+      {
+        title: "Apakah kolesterol tinggi bergejala?",
+        paragraphs: [
+          "Biasanya tidak. Seseorang dapat merasa sehat meskipun kadar kolesterolnya tinggi. Karena itu, pemeriksaan profil lipid diperlukan berdasarkan usia, riwayat keluarga, faktor risiko, dan saran tenaga kesehatan.",
+        ],
       },
       {
         title: "Pemeriksaan",
@@ -164,9 +294,20 @@ export const conditions: Condition[] = [
         ],
       },
       {
-        title: "Pencegahan dan pengelolaan",
+        title: "Pencegahan Kolesterol Tinggi",
         paragraphs: [
-          "Pilih sayur, buah, kacang-kacangan, biji-bijian utuh, dan sumber protein yang lebih rendah lemak jenuh. Batasi gorengan dan makanan ultra-proses, aktif bergerak, hindari rokok, dan lakukan pemeriksaan. Sebagian orang memerlukan obat penurun lipid sesuai penilaian dokter.",
+          "Untuk mencegah tingginya kadar kolesterol dalam tubuh, ada sejumlah upaya yang dapat dilakukan, yaitu:",
+        ],
+        bullets: [
+          "Tidak merokok",
+          "Berolahraga secara rutin, minimal 30 menit sehari",
+          "Mengelola stres dengan baik",
+          "Menurunkan berat badan atau menjaga berat badan agar tetap ideal",
+          "Menerapkan pola makan yang sehat dan bergizi lengkap dan seimbang",
+          "Mengonsumsi makanan yang mengandung serat, seperti buah-buahan dan sayur-sayuran",
+          "Membatasi makanan yang mengandung kolesterol tinggi",
+          "Membatasi konsumsi minuman beralkohol",
+          "Membatasi konsumsi makanan yang berlemak tinggi, khususnya lemak jenuh, seperti daging merah dan kue",
         ],
       },
     ],
@@ -191,15 +332,34 @@ export const conditions: Condition[] = [
         ],
       },
       {
-        title: "Gejala gout",
+        title: "Gejala Asam Urat",
         paragraphs: [
-          "Serangan gout dapat menyebabkan nyeri sendi yang muncul mendadak, bengkak, kemerahan, dan rasa panas. Sering mengenai pangkal ibu jari kaki, tetapi sendi lain juga dapat terkena. Kadar asam urat darah saja tidak selalu cukup untuk memastikan penyebab nyeri sendi.",
+          "Gejala utama penyakit asam urat atau encok adalah serangan nyeri yang hebat pada sendi atau disebut juga serangan gout. Karakteristik serangan gout ini antara lain:",
+        ],
+        bullets: [
+          "Muncul tiba-tiba, biasanya pada malam atau dini hari",
+          "Nyeri terasa sangat berat dan berdenyut-berdenyut",
+          "Sendi bengkak, kemerahan, dan terasa panas",
+          "Nyeri tambah parah jika sendi disentuh atau tersentuh sesuatu",
+          "Berlangsung selama 4–12 jam pertama, kemudian dapat berlangsung selama beberapa hari hingga minggu.",
         ],
       },
       {
-        title: "Faktor risiko",
+        title: "",
         paragraphs: [
-          "Riwayat keluarga, gangguan ginjal, beberapa obat, konsumsi alkohol, minuman tinggi fruktosa, dan makanan tinggi purin tertentu dapat berperan. Berat badan dan kondisi metabolik juga dapat berkaitan.",
+          "Nyeri berat dan bengkak pada kaki, tangan, atau jari kaki akibat serangan gout biasanya akan berkurang dalam beberapa jam. Namun, rasa tidak nyaman pada sendi atau nyeri ringan akan bertahan hingga beberapa hari atau minggu. Setelah itu, gejala akan hilang total, tetapi umumnya akan kambuh kembali dalam 6–12 bulan.",
+          "Pada orang yang sudah lama memiliki penyakit asam urat atau sudah sering mengalami serangan gout, gejala lain yang mungkin terjadi meliputi:",
+        ],
+        bullets: [
+          "Sendi kaku dan sulit digerakkan",
+          "Nyeri saat bergerak karena sendi kaku",
+          "Tofus, yaitu benjolan tidak nyeri yang terletak di sekitar sendi",
+        ],
+      },
+      {
+        title: " ",
+        paragraphs: [
+          "Keluhan penyakit asam urat di atas bisa terjadi pada semua sendi. Namun, gout paling sering menyerang sendi di jempol kaki",
         ],
       },
     ],
@@ -213,6 +373,12 @@ export const conditions: Condition[] = [
           "Pada sebagian orang, batu ginjal dapat berkaitan dengan asam urat.",
         ],
         emphasized: true,
+      },
+      {
+        title: "Faktor risiko",
+        paragraphs: [
+          "Riwayat keluarga, gangguan ginjal, beberapa obat, konsumsi alkohol, minuman tinggi fruktosa, dan makanan tinggi purin tertentu dapat berperan. Berat badan dan kondisi metabolik juga dapat berkaitan.",
+        ],
       },
       {
         title: "Pemeriksaan dan pengelolaan",
@@ -234,12 +400,8 @@ export const conditions: Condition[] = [
 ];
 
 export const diseaseBanners: Record<string, string> = {
-  diabetes:
-    "https://images.unsplash.com/photo-1683727186226-910f31a9da45?auto=format&fit=crop&w=1200&q=80",
-  hipertensi:
-    "https://images.unsplash.com/photo-1615486511484-92e172cc4fe0?auto=format&fit=crop&w=1200&q=80",
-  kolesterol:
-    "https://images.unsplash.com/photo-1778864874378-c3aa56a744c5?auto=format&fit=crop&w=1200&q=80",
-  "asam-urat":
-    "https://images.unsplash.com/photo-1434973539530-5538b4681aac?auto=format&fit=crop&w=1200&q=80",
+  diabetes: "/content/diabetes.jpg",
+  hipertensi: "/content/hipertensi.jpg",
+  kolesterol: "/content/kolestrol.jpg",
+  "asam-urat": "/content/asamurat.jpg",
 };
