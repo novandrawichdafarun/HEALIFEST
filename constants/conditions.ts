@@ -48,6 +48,13 @@ export const conditions: Condition[] = [
     ],
     right: [
       {
+        title: "Komplikasi",
+        paragraphs: [
+          "Jika tidak dikelola, diabetes dapat merusak pembuluh darah, jantung, ginjal, mata, dan saraf; meningkatkan risiko stroke; serta menyebabkan luka kaki yang sulit sembuh.",
+        ],
+        emphasized: true,
+      },
+      {
         title: "Faktor risiko tipe 2",
         bullets: [
           "Berat badan berlebih atau obesitas.",
@@ -55,13 +62,6 @@ export const conditions: Condition[] = [
           "Riwayat keluarga diabetes.",
           "Riwayat diabetes gestasional atau kondisi metabolik tertentu.",
           "Usia dan faktor kesehatan lain.",
-        ],
-        emphasized: true,
-      },
-      {
-        title: "Komplikasi",
-        paragraphs: [
-          "Jika tidak dikelola, diabetes dapat merusak pembuluh darah, jantung, ginjal, mata, dan saraf; meningkatkan risiko stroke; serta menyebabkan luka kaki yang sulit sembuh.",
         ],
       },
       {
@@ -144,7 +144,7 @@ export const conditions: Condition[] = [
     ],
     right: [
       {
-        title: "Komplikasi bila tidak terkendali",
+        title: "Komplikasi",
         bullets: [
           "Serangan jantung dan gagal jantung.",
           "Stroke.",
@@ -265,7 +265,7 @@ export const conditions: Condition[] = [
     ],
     right: [
       {
-        title: "Komplikasi Kolesterol Tinggi",
+        title: "Komplikasi",
         paragraphs: [
           "Kadar kolesterol yang berlebihan perlu ditangani. Apabila dibiarkan, kolesterol akan menumpuk di dinding pembuluh darah arteri dan membentuk plak sehingga membuat arteri menyempit. Kondisi ini disebut dengan aterosklerosis.",
           "Aterosklerosis yang tidak ditanganidapat membuat aliran darah tersumbat dan menimbulkan komplikasi serius berikut ini:",
