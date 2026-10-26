@@ -1,6 +1,7 @@
 import Footer from "@/components/layouts/Footer";
 import Navbar from "@/components/layouts/Navbar";
 import { habits } from "@/constants/habits";
+import { extraHabits } from "@/constants/ekstrahabits";
 
 export const metadata = {
   title: "Gaya Hidup Sehat | HEALIFEST",
@@ -84,6 +85,38 @@ export default function GayaHidupPage() {
                 Konsultasikan kebutuhan khusus kepada tenaga kesehatan atau ahli
                 gizi.
               </p>
+            </div>
+          </section>
+
+          <section className="mt-10" aria-labelledby="kebiasaan-ptm">
+            <h2
+              id="kebiasaan-ptm"
+              className="inline-block text-[0.73rem] font-extrabold tracking-[1.8px] text-(--green)"
+            >
+              KEBIASAAN TAMBAHAN UNTUK CEGAH PTM
+            </h2>
+            <p className="mb-5 mt-2 max-w-3xl text-[0.94rem] text-(--muted)">
+              Langkah kecil untuk membantu menurunkan risiko diabetes,
+              hipertensi, kolesterol tinggi, dan asam urat.
+            </p>
+
+            <div className="grid grid-cols-3 gap-4 max-[1280px]:grid-cols-3 max-[760px]:grid-cols-2 max-[480px]:grid-cols-1">
+              {extraHabits.map(({ title, description, Icon }) => (
+                <article
+                  className="rounded-[17px] border border-(--line) bg-white p-5"
+                  key={title}
+                >
+                  <span className="mb-3 inline-flex rounded-full bg-(--mint) p-3 text-(--green)">
+                    <Icon size={28} strokeWidth={1.8} aria-hidden="true" />
+                  </span>
+                  <h3 className="mb-2 text-base font-bold text-(--green-dark)">
+                    {title}
+                  </h3>
+                  <p className="text-[0.85rem] leading-relaxed text-(--muted)">
+                    {description}
+                  </p>
+                </article>
+              ))}
             </div>
           </section>
         </section>

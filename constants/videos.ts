@@ -24,4 +24,14 @@ export const DATA_VIDEO = [
     title: "Video Edukasi Hipertensi",
     url: "https://www.youtube.com/watch?v=bRkrRlN1q_c",
   },
+  {
+    id: "6",
+    title: "VIDEO EDUKASI KOLESTEROL",
+    url: "https://www.youtube.com/watch?v=5EaoHmfeucY",
+  },
+  {
+    id: "7",
+    title: "Apa itu Kolesterol ?",
+    url: "https://youtu.be/rFDeY6hNIg0?si=jmNB7lL3k8ldVmkf",
+  },
 ];
