@@ -177,15 +177,15 @@ export const conditions: Condition[] = [
           "A: Atasi dengan pengobatan yang tepat",
           "T: Tetap diet dengan gizi seimbang",
           "U: Upayakan aktifitas fisik",
-          "H: Hindari Asap rokok, alkahol dll.",
+          "H: Hindari Asap rokok, alkohol dll.",
         ],
       },
       {
         title: "Pencegahan Hipertensi",
         paragraphs: ["CERDIK:"],
         bullets: [
-          "C:  Cek kesehatan secara rutin",
-          "E: Enyakan asap rokok",
+          "C: Cek kesehatan secara rutin",
+          "E: Eliminasi asap rokok",
           "R: Rajin olahraga",
           "D: Diet seimbang",
           "I: Istirahat cukup",

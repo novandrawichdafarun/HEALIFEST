@@ -25,6 +25,7 @@ const nextConfig: NextConfig = {
   },
   cacheComponents: true,
   partialPrefetching: true,
+  trailingSlash: false,
   turbopack: {
     rules: {
       "*.css": {

@@ -5,8 +5,6 @@ import { stats } from "@/constants/beranda";
 import { ArrowRight, Check, HeartPulse, Leaf } from "lucide-react";
 import Link from "next/link";
 
-export const metadata = { title: "Beranda | HEALIFEST" };
-
 export default function Home() {
   return (
     <>
