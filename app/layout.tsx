@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     google: "X2SOOBeTLMwoDQk7hPArZFUwVp5UhKpYW0qRfYbIeec",
   },
   alternates: {
-    canonical: 'https://vercel.app',
+    canonical: "https://vercel.app",
   },
 };
 

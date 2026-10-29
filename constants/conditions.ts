@@ -16,7 +16,9 @@ export const conditions: Condition[] = [
       {
         title: "Apa itu diabetes melitus?",
         paragraphs: [
-          "Diabetes melitus adalah penyakit kronis yang ditandai oleh kadar glukosa (gula) darah yang tinggi. Insulin adalah hormon yang membantu glukosa masuk ke sel untuk digunakan sebagai energi. Pada diabetes, tubuh tidak menghasilkan insulin yang cukup atau tidak menggunakan insulin secara efektif.",
+          "Menurut American Diabetes Association (ADA) tahun 2026, DM merupakan suatu kelompok gangguan metabolik pada metabolisme karbohidrat, dimana glukosa tidak dimanfaatkan secara optimal sebagai sumber energi dan diproduksi secara berlebihan akibat glukoneogenesis dan glikogenolisis yang tidak adekuat, sehingga menyebabkan terjadinya hiperglikemia.",
+          "Definisi berdasarkan Konsensus PP PERKENI 2024, diabetes melitus merupakan penyakit metabolik kronis yang ditandai dengan peningkatan kadar glukosa darah dan/atau HbA1c akibat ketidakmampuan sekresi insulin, aksi insulin, atau keduanya.",
+          "Gejala klasik diabetes melitus dikenal sebagai trias diabetes, yang terdiri atas poliuria (sering buang air kecil), polidipsia (rasa haus berlebihan), dan polifagia (rasa lapar berlebihan). Ketiga gejala tersebut dapat muncul ketika kadar glukosa darah meningkat, meskipun tidak semua penderita diabetes mengalami gejala yang sama. Gejala diabetes tipe 2 juga dapat berkembang secara perlahan sehingga penyakit terkadang baru terdeteksi setelah beberapa tahun (Dua Lembang et al., 2025; World Health Organization (WHO, 2024).",
         ],
       },
       {
@@ -81,6 +83,14 @@ export const conditions: Condition[] = [
           "Rawat kaki dengan baik dan periksa luka secara berkala",
         ],
       },
+      {
+        title: "Referensi",
+        paragraphs: [
+          "Dua Lembang, F. T., Rintiswati, N., Anida, Muryani, & Sugiman. (2025). Trias diabet sebagai indikator awal: Kajian klinis pada pasien Diabetes Mellitus Tipe II di RSUD Sleman. Mikki: Majalah Ilmu Keperawatan dan Kesehatan Indonesia, 14(2). https://doi.org/10.47317/mikki.v14i2.834",
+          "National Institute of Diabetes and Digestive and Kidney Diseases. (n.d.). Symptoms & causes of diabetes. https://www.niddk.nih.gov/health-information/diabetes/overview/symptoms-causes",
+          "World Health Organization. (2024, November 14). Diabetes. https://www.who.int/news-room/fact-sheets/detail/diabetes",
+        ],
+      },
     ],
     takeaway:
       "Kurangi minuman berpemanis, pilih makanan kaya serat, aktif bergerak, hindari rokok, dan lakukan pemeriksaan sesuai faktor risiko. Diabetes tidak dapat dipastikan hanya dari gejala.",
@@ -99,7 +109,8 @@ export const conditions: Condition[] = [
       {
         title: "Apa itu hipertensi?",
         paragraphs: [
-          "Hipertensi adalah tekanan darah yang menetap pada tingkat tinggi. Tekanan darah ditulis dengan dua angka: sistolik (saat jantung berkontraksi) dan diastolik (saat jantung beristirahat di antara denyut). WHO menggunakan ambang diagnosis klinis ≥140 mmHg sistolik dan/atau ≥90 mmHg diastolik yang terkonfirmasi pada pengukuran di hari berbeda; interpretasi dan target dapat berbeda sesuai kondisi individu dan pedoman setempat.",
+          "Menurut World Health Organization (WHO), hipertensi adalah kondisi medis serius ketika tekanan darah di dalam pembuluh darah meningkat secara persisten di atas normal. Pengukuran tekanan darah ini diwakili oleh dua angka, yaitu angka sistolik (tekanan saat jantung berdetak memompa darah) dan angka diastolik (tekanan saat jantung beristirahat di antara detakan).",
+          "WHO menetapkan bahwa seseorang dikatakan mengalami hipertensi apabila hasil pemeriksaan menunjukkan tekanan darah sistolik ≥140 mmHg dan/atau tekanan darah diastolik ≥90 mmHg. Pengukuran ini idealnya dilakukan pada minimal dua kali pemeriksaan yang berbeda dalam kondisi pasien yang tenang dan rileks.",
           "Hasil pengukuran tekanan darah akan diklasifikasikan sebagai berikut:",
         ],
         bullets: [
@@ -110,7 +121,7 @@ export const conditions: Condition[] = [
         ],
       },
       {
-        title: "Gejala",
+        title: "Gejala Hipertensi",
         paragraphs: [
           "Hipertensi sering disebut sebagai silent killer karena umumnya tidak menimbulkan gejala. Pada banyak kasus, gejala baru muncul ketika tekanan darah sudah sangat tinggi atau terjadi komplikasi.",
         ],
@@ -141,6 +152,12 @@ export const conditions: Condition[] = [
           "Merokok dan mengonsumsi minuman beralkohol",
         ],
       },
+      {
+        title: "Pemeriksaan dan pengelolaan",
+        paragraphs: [
+          "Tekanan darah diukur dengan alat yang sesuai dan teknik yang benar. Istirahat beberapa menit sebelum pengukuran, duduk dengan punggung tersangga, kaki menapak, dan lengan setinggi jantung. Tenaga kesehatan dapat menyarankan pengukuran berulang, perubahan gaya hidup, dan obat sesuai kebutuhan.",
+        ],
+      },
     ],
     right: [
       {
@@ -154,12 +171,6 @@ export const conditions: Condition[] = [
         emphasized: true,
       },
       {
-        title: "Pemeriksaan dan pengelolaan",
-        paragraphs: [
-          "Tekanan darah diukur dengan alat yang sesuai dan teknik yang benar. Istirahat beberapa menit sebelum pengukuran, duduk dengan punggung tersangga, kaki menapak, dan lengan setinggi jantung. Tenaga kesehatan dapat menyarankan pengukuran berulang, perubahan gaya hidup, dan obat sesuai kebutuhan.",
-        ],
-      },
-      {
         title: "Pencegahan",
         paragraphs: [
           "Batasi garam, perbanyak sayur dan buah, aktif bergerak, pertahankan berat badan sehat, berhenti merokok, tidur cukup, dan ikuti pengobatan yang diresepkan.",
@@ -168,6 +179,12 @@ export const conditions: Condition[] = [
       {
         title: "Ayok cegah hipertensi dengan CERDIK & PATUH",
         emphasized: true,
+      },
+      {
+        title: "",
+        paragraphs: [
+          "Kementerian Kesehatan menjelaskan CERDIK sebagai upaya pencegahan melalui pemeriksaan kesehatan, menghindari asap rokok, aktivitas fisik, diet seimbang, istirahat cukup, dan pengelolaan stres. PATUH ditujukan untuk membantu pengendalian hipertensi. (Kementerian Kesehatan RI, 2023)",
+        ],
       },
       {
         title: "Kendalikan Hipertensi",
@@ -185,11 +202,19 @@ export const conditions: Condition[] = [
         paragraphs: ["CERDIK:"],
         bullets: [
           "C: Cek kesehatan secara rutin",
-          "E: Eliminasi asap rokok",
+          "E: Enyakan asap rokok",
           "R: Rajin olahraga",
           "D: Diet seimbang",
           "I: Istirahat cukup",
           "K: Kelola stress",
+        ],
+      },
+      {
+        title: "Referensi",
+        paragraphs: [
+          "Kementerian Kesehatan Republik Indonesia. (2023, 31 Mei). Penanganan hipertensi dengan perilaku CERDIK dan PATUH. https://keslan.kemkes.go.id/view_artikel/2517/penanganan-hipertensi-dengan-",
+          "Kementerian Kesehatan Republik Indonesia. (2026). Pedoman Nasional Pelayanan Klinis Tata Laksana Hipertensi Dewasa. https://www.kemkes.go.id/id/pnpk-hipertensi-dewasa-kemenkes-2026",
+          "World Health Organization. Diakses pada 2026. Hypertension: Global Guidelines and Diagnostic Criteria",
         ],
       },
     ],
@@ -210,7 +235,8 @@ export const conditions: Condition[] = [
       {
         title: "Apa itu kolesterol?",
         paragraphs: [
-          "Kolesterol adalah zat berlemak yang dibutuhkan tubuh untuk membentuk sel dan hormon. Kolesterol dibawa dalam darah oleh lipoprotein. LDL sering disebut “kolesterol jahat” karena kadar tinggi dapat berkontribusi pada penumpukan plak di arteri; HDL membantu membawa kolesterol kembali ke hati. Trigliserida adalah jenis lemak darah lain yang juga perlu dinilai.",
+          "Kolesterol merupakan salah satu jenis lipid yang dibutuhkan tubuh untuk menjalankan berbagai fungsi fisiologis. Namun, gangguan kadar lipid dalam darah atau dislipidemia dapat meningkatkan risiko penyakit kardiovaskular aterosklerotik, seperti penyakit jantung koroner dan stroke. Penilaian profil lipid mencakup kadar kolesterol total, kolesterol LDL (low-density lipoprotein), kolesterol HDL (high-density lipoprotein), dan trigliserida. Menurut Blumenthal et al. (2026).",
+          "Pedoman Blumenthal et al. (2026) menekankan pentingnya penilaian risiko untuk menentukan kebutuhan dan sasaran terapi penurun lipid sebagai berikut :",
         ],
       },
       {
@@ -262,11 +288,24 @@ export const conditions: Condition[] = [
           "Selain beberapa faktor di atas, seseorang yang berusia 40 tahun ke atas juga lebih berisiko menderita kolesterol. Hal ini terjadi karena seiring bertambahnya usia, hati menjadi kurang mampu membuang kolesterol jahat (LDL).",
         ],
       },
+      {
+        title: "Apakah kolesterol tinggi bergejala?",
+        paragraphs: [
+          "Biasanya tidak. Seseorang dapat merasa sehat meskipun kadar kolesterolnya tinggi. Karena itu, pemeriksaan profil lipid diperlukan berdasarkan usia, riwayat keluarga, faktor risiko, dan saran tenaga kesehatan.",
+        ],
+      },
+      {
+        title: "Pemeriksaan",
+        paragraphs: [
+          "Profil lipid biasanya menilai kolesterol total, LDL, HDL, dan trigliserida. Apakah perlu berpuasa sebelum tes bergantung pada instruksi fasilitas kesehatan dan jenis pemeriksaan. Target kolesterol ditentukan berdasarkan risiko kardiovaskular seseorang, bukan satu angka untuk semua orang.",
+        ],
+      },
     ],
     right: [
       {
         title: "Komplikasi",
         paragraphs: [
+          "Kolesterol LDL yang tinggi dapat berkontribusi terhadap pembentukan plak aterosklerotik pada dinding arteri. Penumpukan plak tersebut dapat mempersempit pembuluh darah dan meningkatkan risiko kejadian kardiovaskular, termasuk serangan jantung dan stroke iskemik. Oleh karena itu, pengendalian kadar lipid merupakan salah satu bagian penting dalam pencegahan penyakit kardiovaskular (Mach et al., 2025).",
           "Kadar kolesterol yang berlebihan perlu ditangani. Apabila dibiarkan, kolesterol akan menumpuk di dinding pembuluh darah arteri dan membentuk plak sehingga membuat arteri menyempit. Kondisi ini disebut dengan aterosklerosis.",
           "Aterosklerosis yang tidak ditanganidapat membuat aliran darah tersumbat dan menimbulkan komplikasi serius berikut ini:",
         ],
@@ -282,20 +321,9 @@ export const conditions: Condition[] = [
         emphasized: true,
       },
       {
-        title: "Apakah kolesterol tinggi bergejala?",
-        paragraphs: [
-          "Biasanya tidak. Seseorang dapat merasa sehat meskipun kadar kolesterolnya tinggi. Karena itu, pemeriksaan profil lipid diperlukan berdasarkan usia, riwayat keluarga, faktor risiko, dan saran tenaga kesehatan.",
-        ],
-      },
-      {
-        title: "Pemeriksaan",
-        paragraphs: [
-          "Profil lipid biasanya menilai kolesterol total, LDL, HDL, dan trigliserida. Apakah perlu berpuasa sebelum tes bergantung pada instruksi fasilitas kesehatan dan jenis pemeriksaan. Target kolesterol ditentukan berdasarkan risiko kardiovaskular seseorang, bukan satu angka untuk semua orang.",
-        ],
-      },
-      {
         title: "Pencegahan Kolesterol Tinggi",
         paragraphs: [
+          "Pencegahan kolesterol tinggi dilakukan melalui penerapan pola makan sehat, aktivitas fisik secara teratur, pengendalian berat badan, penghentian kebiasaan merokok, dan pemeriksaan profil lipid sesuai kebutuhan. Pada individu dengan risiko kardiovaskular tinggi, perubahan gaya hidup dapat disertai terapi obat berdasarkan penilaian tenaga medis. Pendekatan pencegahan dan pengobatan perlu disesuaikan dengan tingkat risiko serta sasaran terapi setiap individu (Blumenthal et al., 2026; Mach et al., 2025).",
           "Untuk mencegah tingginya kadar kolesterol dalam tubuh, ada sejumlah upaya yang dapat dilakukan, yaitu:",
         ],
         bullets: [
@@ -308,6 +336,13 @@ export const conditions: Condition[] = [
           "Membatasi makanan yang mengandung kolesterol tinggi",
           "Membatasi konsumsi minuman beralkohol",
           "Membatasi konsumsi makanan yang berlemak tinggi, khususnya lemak jenuh, seperti daging merah dan kue",
+        ],
+      },
+      {
+        title: "Referensi",
+        paragraphs: [
+          "Blumenthal, R. S., Morris, P. B., Gaudino, M., et al. (2026). 2026 ACC/AHA/AACVPR/ABC/ACPM/ADA/AGS/APhA/ASPC/NLA/PCNA guideline on the management of dyslipidemia: A report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines. Circulation. https://doi.org/10.1161/CIR.0000000000001423",
+          "Mach, F., Koskinas, K. C., Roeters van Lennep, J., et al. (2025). 2025 focused update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. European Heart Journal, 46(42), 4359–4378. https://doi.org/10.1093/eurheartj/ehaf190",
         ],
       },
     ],
@@ -328,7 +363,9 @@ export const conditions: Condition[] = [
       {
         title: "Apa itu asam urat?",
         paragraphs: [
-          "Asam urat merupakan zat yang terbentuk saat tubuh memecah purin, senyawa yang terdapat secara alami di dalam tubuh dan beberapa makanan. Asam urat biasanya dikeluarkan melalui ginjal. Bila kadarnya tinggi, kristal urat dapat terbentuk dan menumpuk di sendi pada sebagian orang, menyebabkan gout. Kadar tinggi tidak selalu berarti seseorang mengalami gout.",
+          "Penyakit asam urat atau gout arthritis merupakan penyakit radang sendi yang berkaitan dengan pengendapan kristal monosodium urat pada sendi dan jaringan di sekitarnya. Gejala utama gout ditandai dengan serangan nyeri sendi yang hebat dan muncul secara tiba-tiba, sering kali pada malam hari atau dini hari. Serangan tersebut umumnya disertai pembengkakan, kemerahan, dan peningkatan suhu pada area sendi yang terkena. Sendi yang paling sering mengalami serangan adalah pangkal ibu jari kaki, meskipun sendi pergelangan kaki, lutut, tangan, dan siku juga dapat terkena (National Institute for Health and Care Excellence (NICE), 2022).",
+          "Pada gout yang berlangsung lama, dapat terbentuk tofus, yaitu benjolan akibat penumpukan kristal urat pada jaringan. Keberadaan tofus merupakan salah satu tanda yang dapat ditemukan pada gout kronis dan menjadi pertimbangan dalam penatalaksanaan penyakit. FitzGerald et al. (2020) membahas keberadaan tofus sebagai salah satu kondisi klinis yang penting dalam menentukan kebutuhan terapi penurun kadar urat.",
+          "Berdasarkan uraian tersebut, gejala penyakit asam urat meliputi nyeri sendi hebat yang muncul secara tiba-tiba, pembengkakan, kemerahan, peningkatan suhu pada sendi, serta kemungkinan terbentuknya tofus pada penyakit yang berlangsung lama. Pengenalan gejala tersebut penting untuk mendukung pemeriksaan dan penegakan diagnosis yang tepat (NICE, 2022; Neilson et al., 2022).",
         ],
       },
       {
@@ -390,6 +427,16 @@ export const conditions: Condition[] = [
         title: "Pencegahan",
         paragraphs: [
           "Minum air secukupnya bila tidak ada pembatasan cairan dari dokter, batasi alkohol dan minuman berpemanis, atur pola makan seimbang, dan kelola berat badan secara bertahap. Hindari diet ekstrem. Orang dengan gout mungkin membutuhkan obat penurun asam urat meski sudah mengubah pola hidup.",
+        ],
+      },
+      {
+        title: "Referensi",
+        paragraphs: [
+          "FitzGerald, J. D., Dalbeth, N., Mikuls, T., et al. (2020). 2020 American College of Rheumatology guideline for the management of gout. Arthritis & Rheumatology, 72(6), 879–895. https://doi.org/10.1002/art.41247",
+          "National Institute for Health and Care Excellence. (2022). Gout: Diagnosis and management (NICE Guideline NG219). https://www.nice.org.uk/guidance/ng219",
+          "Neilson, J., Bonnon, A., Dickson, A., & Roddy, E. (2022). Gout: Diagnosis and management—Summary of NICE guidance. BMJ, 378, o1754. https://doi.org/10.1136/bmj.o1754",
+          "Alodokter. (n.d.). Gejala asam urat. https://www.alodokter.com/rematik-asam-urat/gejala",
+          "Kementerian Kesehatan Republik Indonesia. (n.d.). Asam urat. Direktorat Jenderal Kesehatan Lanjutan. https://keslan.kemkes.go.id/view_artikel/1955/asam-urat",
         ],
       },
     ],
