@@ -18,15 +18,21 @@ export const conditions: Condition[] = [
         paragraphs: [
           "Menurut American Diabetes Association (ADA) tahun 2026, DM merupakan suatu kelompok gangguan metabolik pada metabolisme karbohidrat, dimana glukosa tidak dimanfaatkan secara optimal sebagai sumber energi dan diproduksi secara berlebihan akibat glukoneogenesis dan glikogenolisis yang tidak adekuat, sehingga menyebabkan terjadinya hiperglikemia.",
           "Definisi berdasarkan Konsensus PP PERKENI 2024, diabetes melitus merupakan penyakit metabolik kronis yang ditandai dengan peningkatan kadar glukosa darah dan/atau HbA1c akibat ketidakmampuan sekresi insulin, aksi insulin, atau keduanya.",
-          "Gejala klasik diabetes melitus dikenal sebagai trias diabetes, yang terdiri atas poliuria (sering buang air kecil), polidipsia (rasa haus berlebihan), dan polifagia (rasa lapar berlebihan). Ketiga gejala tersebut dapat muncul ketika kadar glukosa darah meningkat, meskipun tidak semua penderita diabetes mengalami gejala yang sama. Gejala diabetes tipe 2 juga dapat berkembang secara perlahan sehingga penyakit terkadang baru terdeteksi setelah beberapa tahun (Dua Lembang et al., 2025; World Health Organization (WHO, 2024).",
         ],
       },
       {
         title: "Jenis diabetes",
         bullets: [
-          "Diabetes tipe 1: tubuh sangat sedikit atau tidak menghasilkan insulin; umumnya memerlukan insulin setiap hari.",
+          "Diabetes tipe 1: kondisi ketika kadar gula darah meningkat karena tubuh tidak mampu menghasilkan cukup insulin.",
           "Diabetes tipe 2: tubuh tidak menggunakan insulin secara efektif dan/atau produksi insulin tidak mencukupi. Ini merupakan jenis yang paling umum.",
           "Diabetes gestasional: diabetes yang terdeteksi selama kehamilan dan memerlukan pemantauan tenaga kesehatan.",
+        ],
+      },
+      {
+        title: "Perbedaan Penyebab Diabetes Tipe 1 dan Tipe 2",
+        paragraphs: [
+          "Diabetes tipe 1 disebabkan oleh pankreas yang memecah sel-sel untuk produksi hormon insulin. Sehingga, insulin tidak dapat diproduksi dan membutuhkan asupan dari luar seperti suntik insulin.",
+          "diabetes tipe 2 disebabkan oleh kelenjar pankreas yang tidak dapat mencukupi kebutuhan insulin pada tubuh. Sehingga, insulin tidak berfungsi dengan optimal.",
         ],
       },
       {
@@ -41,10 +47,16 @@ export const conditions: Condition[] = [
         title: "Gejala Umum Lainnya",
         bullets: [
           "Penurunan berat badan: Terjadi tanpa alasan yang jelas karena tubuh membakar cadangan lemak dan otot akibat glukosa tidak bisa diolah menjadi energi.",
-          "Mudah lelah dan lemah: Tubuh kekurangan pasokan energi utama dari glukosa.",
+          "Mudah lelah dan Lemah : Tubuh tidak dapat memanfaatkan glukosa secara optimal sebagai sumber energi, sehingga tubuh terasa cepat lelah dan kurang bertenaga.",
           "Penglihatan kabur: Kadar gula darah tinggi merusak pembuluh darah kecil di retina mata.",
           "Luka sulit sembuh: Sirkulasi darah yang buruk dan kadar gula tinggi menghambat proses regenerasi jaringan.",
           "Kesemutan atau mati rasa: Sering terasa di bagian tangan dan kaki sebagai tanda awal kerusakan saraf (neuropati diabetik).",
+        ],
+      },
+      {
+        title: "",
+        paragraphs: [
+          "(Dua Lembang et al., 2025, World Health Organization (WHO, 2024).",
         ],
       },
     ],
@@ -52,7 +64,7 @@ export const conditions: Condition[] = [
       {
         title: "Komplikasi",
         paragraphs: [
-          "Jika tidak dikelola, diabetes dapat merusak pembuluh darah, jantung, ginjal, mata, dan saraf; meningkatkan risiko stroke; serta menyebabkan luka kaki yang sulit sembuh.",
+          "Jika tidak dikelola, diabetes dapat merusak pembuluh darah, jantung, ginjal, mata, dan saraf, meningkatkan risiko stroke, serta menyebabkan luka kaki yang sulit sembuh.",
         ],
         emphasized: true,
       },
@@ -109,7 +121,7 @@ export const conditions: Condition[] = [
       {
         title: "Apa itu hipertensi?",
         paragraphs: [
-          "Menurut World Health Organization (WHO), hipertensi adalah kondisi medis serius ketika tekanan darah di dalam pembuluh darah meningkat secara persisten di atas normal. Pengukuran tekanan darah ini diwakili oleh dua angka, yaitu angka sistolik (tekanan saat jantung berdetak memompa darah) dan angka diastolik (tekanan saat jantung beristirahat di antara detakan).",
+          "Menurut World Health Organization (WHO, 2023), hipertensi merupakan kondisi medis ketika tekanan darah dalam pembuluh darah meningkat secara persisten atau menetap di atas batas normal. Tekanan darah dinyatakan dalam dua angka, yaitu tekanan sistolik (tekanan dalam pembuluh darah saat jantung berkontraksi atau memompa darah) dan tekanan diastolik (tekanan dalam pembuluh darah saat jantung berelaksasi atau beristirahat di antara detakan).",
           "WHO menetapkan bahwa seseorang dikatakan mengalami hipertensi apabila hasil pemeriksaan menunjukkan tekanan darah sistolik ≥140 mmHg dan/atau tekanan darah diastolik ≥90 mmHg. Pengukuran ini idealnya dilakukan pada minimal dua kali pemeriksaan yang berbeda dalam kondisi pasien yang tenang dan rileks.",
           "Hasil pengukuran tekanan darah akan diklasifikasikan sebagai berikut:",
         ],
@@ -215,6 +227,7 @@ export const conditions: Condition[] = [
           "Kementerian Kesehatan Republik Indonesia. (2023, 31 Mei). Penanganan hipertensi dengan perilaku CERDIK dan PATUH. https://keslan.kemkes.go.id/view_artikel/2517/penanganan-hipertensi-dengan-",
           "Kementerian Kesehatan Republik Indonesia. (2026). Pedoman Nasional Pelayanan Klinis Tata Laksana Hipertensi Dewasa. https://www.kemkes.go.id/id/pnpk-hipertensi-dewasa-kemenkes-2026",
           "World Health Organization. Diakses pada 2026. Hypertension: Global Guidelines and Diagnostic Criteria",
+          "World Health Organization. (2023). Hypertension. Geneva: WHO. https://www.who.int/news-room/fact-sheets/detail/hypertension",
         ],
       },
     ],
@@ -323,7 +336,7 @@ export const conditions: Condition[] = [
       {
         title: "Pencegahan Kolesterol Tinggi",
         paragraphs: [
-          "Pencegahan kolesterol tinggi dilakukan melalui penerapan pola makan sehat, aktivitas fisik secara teratur, pengendalian berat badan, penghentian kebiasaan merokok, dan pemeriksaan profil lipid sesuai kebutuhan. Pada individu dengan risiko kardiovaskular tinggi, perubahan gaya hidup dapat disertai terapi obat berdasarkan penilaian tenaga medis. Pendekatan pencegahan dan pengobatan perlu disesuaikan dengan tingkat risiko serta sasaran terapi setiap individu (Blumenthal et al., 2026; Mach et al., 2025).",
+          "Pencegahan kolesterol tinggi dilakukan melalui penerapan pola makan sehat, aktivitas fisik secara teratur, pengendalian berat badan, penghentian kebiasaan merokok, dan pemeriksaan profil lipid sesuai kebutuhan. Pada individu dengan risiko kardiovaskular tinggi, perubahan gaya hidup dapat disertai terapi obat berdasarkan penilaian tenaga medis. Pendekatan pencegahan dan pengobatan perlu disesuaikan dengan tingkat risiko serta sasaran terapi setiap individu (Blumenthal et al., 2026, Mach et al., 2025).",
           "Untuk mencegah tingginya kadar kolesterol dalam tubuh, ada sejumlah upaya yang dapat dilakukan, yaitu:",
         ],
         bullets: [
@@ -365,7 +378,7 @@ export const conditions: Condition[] = [
         paragraphs: [
           "Penyakit asam urat atau gout arthritis merupakan penyakit radang sendi yang berkaitan dengan pengendapan kristal monosodium urat pada sendi dan jaringan di sekitarnya. Gejala utama gout ditandai dengan serangan nyeri sendi yang hebat dan muncul secara tiba-tiba, sering kali pada malam hari atau dini hari. Serangan tersebut umumnya disertai pembengkakan, kemerahan, dan peningkatan suhu pada area sendi yang terkena. Sendi yang paling sering mengalami serangan adalah pangkal ibu jari kaki, meskipun sendi pergelangan kaki, lutut, tangan, dan siku juga dapat terkena (National Institute for Health and Care Excellence (NICE), 2022).",
           "Pada gout yang berlangsung lama, dapat terbentuk tofus, yaitu benjolan akibat penumpukan kristal urat pada jaringan. Keberadaan tofus merupakan salah satu tanda yang dapat ditemukan pada gout kronis dan menjadi pertimbangan dalam penatalaksanaan penyakit. FitzGerald et al. (2020) membahas keberadaan tofus sebagai salah satu kondisi klinis yang penting dalam menentukan kebutuhan terapi penurun kadar urat.",
-          "Berdasarkan uraian tersebut, gejala penyakit asam urat meliputi nyeri sendi hebat yang muncul secara tiba-tiba, pembengkakan, kemerahan, peningkatan suhu pada sendi, serta kemungkinan terbentuknya tofus pada penyakit yang berlangsung lama. Pengenalan gejala tersebut penting untuk mendukung pemeriksaan dan penegakan diagnosis yang tepat (NICE, 2022; Neilson et al., 2022).",
+          "Berdasarkan uraian tersebut, gejala penyakit asam urat meliputi nyeri sendi hebat yang muncul secara tiba-tiba, pembengkakan, kemerahan, peningkatan suhu pada sendi, serta kemungkinan terbentuknya tofus pada penyakit yang berlangsung lama. Pengenalan gejala tersebut penting untuk mendukung pemeriksaan dan penegakan diagnosis yang tepat (NICE, 2022, Neilson et al., 2022).",
         ],
       },
       {
