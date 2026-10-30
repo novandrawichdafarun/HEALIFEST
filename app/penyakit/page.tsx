@@ -116,7 +116,7 @@ export default function PenyakitPage() {
                   key={condition.id}
                 >
                   {/* Header Topik Ekstra Lebar & Tinggi */}
-                  <div className="relative flex min-h-[240px] items-center overflow-hidden bg-(--green-dark) px-8 py-14 text-white sm:min-h-[300px] sm:px-12 sm:py-20">
+                  <div className="relative flex min-h-60 items-center overflow-hidden bg-(--green-dark) px-8 py-14 text-white sm:min-h-75 sm:px-12 sm:py-20">
                     {/* Komponen Optimasi Gambar Next.js */}
                     <Image
                       src={bannerImage}
@@ -127,11 +127,11 @@ export default function PenyakitPage() {
                       priority={condition.number === "01"}
                     />
                     {/* Lapisan Gradasi Gelap */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/25 to-transparent" />
+                    <div className="absolute inset-0 bg-linear-to-r from-black/50 via-black/25 to-transparent" />
 
                     {/* Konten Utama Header */}
                     <div className="relative z-10 flex items-center gap-6 max-[760px]:flex-col max-[760px]:items-start">
-                      <span className="grid size-20 shrink-0 place-items-center rounded-[24px] bg-white/20 backdrop-blur-md text-white shadow-md max-[760px]:size-16 max-[760px]:rounded-2xl">
+                      <span className="grid size-20 shrink-0 place-items-center rounded-3xl bg-white/20 backdrop-blur-md text-white shadow-md max-[760px]:size-16 max-[760px]:rounded-2xl">
                         <Icon
                           size={42}
                           className="max-[760px]:size-9"

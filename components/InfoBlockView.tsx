@@ -14,7 +14,7 @@ export default function InfoBlockView({ block }: { block: InfoBlock }) {
       </h3>
       {block.paragraphs?.map((paragraph) => (
         <p
-          className="mb-5 text-[0.91rem] leading-[1.7] text-[#53665b] last:mb-0"
+          className="mb-5 text-[0.91rem] leading-[1.7] text-[#53665b] last:mb-0 text-justify"
           key={paragraph}
         >
           {paragraph}
